@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="365px" preserveAspectRatio="none" style="width:843px;height:365px;" version="1.1" viewBox="0 0 843 365" width="843px" zoomAndPan="magnify"><defs/><g><ellipse cx="440.9706" cy="20.8774" fill="#F8F8F8" rx="19.9706" ry="12.8774" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="24" x="428.9706" y="24.3618">app</text><ellipse cx="616.0919" cy="162.3774" fill="#F8F8F8" rx="22.0919" ry="12.8774" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="27" x="602.5919" y="165.8618">auth</text><ellipse cx="72.8889" cy="222.2778" fill="#F8F8F8" rx="66.8889" ry="15.7778" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="107" x="19.3889" y="225.7621">controllers/board</text><ellipse cx="225.774" cy="222.4548" fill="#F8F8F8" rx="70.274" ry="16.4548" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="115" x="168.274" y="225.9392">controllers/section</text><ellipse cx="480.7644" cy="222.4529" fill="#F8F8F8" rx="62.7644" ry="14.9529" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="97" x="432.2644" y="225.9373">controllers/task</text><ellipse cx="750.7644" cy="222.4529" fill="#F8F8F8" rx="62.7644" ry="14.9529" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="97" x="702.2644" y="225.9373">controllers/user</text><ellipse cx="283.8944" cy="340.0789" fill="#F8F8F8" rx="58.3944" ry="14.0789" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="86" x="240.8944" y="343.5633">modelOptions</text><ellipse cx="78.8944" cy="282.5789" fill="#F8F8F8" rx="58.3944" ry="14.0789" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="86" x="35.8944" y="286.0633">models/board</text><ellipse cx="350.0537" cy="282.7107" fill="#F8F8F8" rx="61.5537" ry="14.7107" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="94" x="303.0537" y="286.1951">models/section</text><ellipse cx="219.1095" cy="282.3219" fill="#F8F8F8" rx="54.6095" ry="13.3219" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="76" x="181.1095" y="285.8063">models/task</text><ellipse cx="683.1095" cy="282.3219" fill="#F8F8F8" rx="54.6095" ry="13.3219" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="76" x="645.1095" y="285.8063">models/user</text><ellipse cx="440.7843" cy="105.8774" fill="#F8F8F8" rx="31.2843" ry="12.8774" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="40" x="420.7843" y="109.3618">routes</text><ellipse cx="245.977" cy="162.6954" fill="#F8F8F8" rx="56.477" ry="13.6954" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="81" x="205.477" y="166.1798">routes/board</text><ellipse cx="377.0667" cy="162.3133" fill="#F8F8F8" rx="59.5667" ry="14.3133" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="89" x="332.5667" y="165.7977">routes/section</text><ellipse cx="504.7975" cy="162.4595" fill="#F8F8F8" rx="52.7975" ry="12.9595" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="71" x="469.2975" y="165.9439">routes/task</text><ellipse cx="616.2382" cy="222.3476" fill="#F8F8F8" rx="57.2382" ry="13.8476" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="83" x="574.7382" y="225.832">tokenHandler</text><ellipse cx="356.9264" cy="222.3774" fill="#F8F8F8" rx="45.4264" ry="12.8774" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="60" x="326.9264" y="225.8618">validation</text><ellipse cx="378.8345" cy="20.8774" fill="#F8F8F8" rx="26.3345" ry="12.8774" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="33" x="362.3345" y="24.3618">www</text><!--MD5=[4310d82b442df7db071be166cafab6a0]
+link app to routes--><path d="M441,34.247 C441,48.427 441,71.877 441,87.862 " fill="none" id="app-&gt;routes" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="441,92.973,445,83.973,441,87.973,437,83.973,441,92.973" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[94fdc6e10177fef678ef2247069efb96]
+link auth to controllers/user--><path d="M633.098,170.846 C654.204,179.914 690.587,195.545 717.368,207.051 " fill="none" id="auth-&gt;controllers/user" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="722.251,209.149,715.5614,201.9206,717.6572,207.1749,712.4029,209.2707,722.251,209.149" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[386580895416c375ea16b01e424215a8]
+link auth to models/user--><path d="M637.948,164.647 C686.176,167.674 798.934,177.69 822,206 C831.264,217.37 830.724,227.21 822,239 C803.554,263.9287 770.787,274.7175 741.698,279.1973 " fill="none" id="auth-&gt;models/user" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="736.69,279.9129,746.166,282.5971,741.6395,279.2044,745.0323,274.6779,736.69,279.9129" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[8ba60ae35c5fa0ebf6d1aef3b6ca3ea7]
+link auth to tokenHandler--><path d="M616,175.518 C616,183.506 616,194.149 616,203.183 " fill="none" id="auth-&gt;tokenHandler" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="616,208.284,620,199.284,616,203.284,612,199.284,616,208.284" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[fbd93674c2fc66a7d2420471cd824fca]
+link auth to validation--><path d="M596.709,168.966 C587.202,171.568 575.543,174.622 565,177 C496.634,192.422 478.162,189.699 410,206 C403.881,207.463 397.417,209.195 391.186,210.961 " fill="none" id="auth-&gt;validation" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="386.019,212.448,395.7742,213.8032,390.824,211.0653,393.5619,206.1152,386.019,212.448" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[ef97c4212d9ffc63b8f7d785c23b4f13]
+link controllers/board to models/board--><path d="M74.5764,238.739 C75.3438,246.156 76.2728,255.1374 77.0811,262.9503 " fill="none" id="controllers/board-&gt;models/board" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="77.6178,268.139,80.6704,258.7751,77.1032,263.1655,72.7128,259.5984,77.6178,268.139" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[7dc761d1041720c8346a23b8275ca2e3]
+link controllers/board to models/section--><path d="M121.25,233.603 C171.602,244.146 250.142,260.5912 300.834,271.2052 " fill="none" id="controllers/board-&gt;models/section" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="305.955,272.2777,297.9653,266.5188,301.061,271.2534,296.3264,274.3492,305.955,272.2777" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[8197b56442916f2ef94767e54f3eaf6e]
+link controllers/board to models/task--><path d="M105.7652,236.516 C130.041,246.16 162.951,259.2339 187.035,268.8014 " fill="none" id="controllers/board-&gt;models/task" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="191.728,270.6661,184.8403,263.6262,187.0812,268.8203,181.8871,271.0612,191.728,270.6661" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[536183f1c9858bc33b967d46d703e33f]
+link controllers/section to models/section--><path d="M256.017,237.54 C275.047,246.441 299.613,257.9317 318.856,266.9326 " fill="none" id="controllers/section-&gt;models/section" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="323.627,269.1642,317.1697,261.7276,319.098,267.0456,313.78,268.974,323.627,269.1642" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[ee24228c15a6e7780a27071eefe41861]
+link controllers/section to models/task--><path d="M224.124,239.043 C223.216,246.568 222.12,255.6457 221.176,263.4727 " fill="none" id="controllers/section-&gt;models/task" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="220.55,268.6572,225.5996,260.2013,221.1491,263.6932,217.6572,259.2428,220.55,268.6572" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[67216c81bee73a5bc56d2506381faca3]
+link controllers/task to models/section--><path d="M452.897,235.942 C432.069,245.164 403.653,257.7451 381.96,267.3498 " fill="none" id="controllers/task-&gt;models/section" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="377.159,269.4752,387.0078,269.489,381.7309,267.4509,383.769,262.1739,377.159,269.4752" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[2ca4a054cb4714060ece009592ad5b66]
+link controllers/task to models/task--><path d="M436.852,233.273 C388.448,243.989 311.251,261.078 262.933,271.7744 " fill="none" id="controllers/task-&gt;models/task" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="257.769,272.9175,267.4205,274.879,262.651,271.8375,265.6925,267.0679,257.769,272.9175" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[450c01a031185508d644121ae9284963]
+link controllers/user to models/user--><path d="M734.885,237.245 C724.761,245.881 711.679,257.0387 701.184,265.9902 " fill="none" id="controllers/user-&gt;models/user" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="697.154,269.4273,706.5975,266.6307,700.9584,266.1828,701.4063,260.5437,697.154,269.4273" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[f92a793a68d6559b736cef4bd9bdf1d7]
+link models/board to modelOptions--><path d="M115.65,293.4223 C151.25,303.0604 205.229,317.6743 242.418,327.7424 " fill="none" id="models/board-&gt;modelOptions" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="247.322,329.0702,239.6789,322.8586,242.4955,327.7644,237.5897,330.581,247.322,329.0702" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[d5fa6543b953880cf9035f708b88e83f]
+link models/section to modelOptions--><path d="M334.359,296.6527 C324.936,304.5763 312.874,314.7195 302.917,323.0923 " fill="none" id="models/section-&gt;modelOptions" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="299.075,326.3237,308.5374,323.592,302.9015,323.1054,303.3881,317.4695,299.075,326.3237" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[8a31cd89736153039205c5369a5330cb]
+link models/task to modelOptions--><path d="M233.104,295.5427 C242.465,303.5358 254.863,314.1214 265.078,322.8438 " fill="none" id="models/task-&gt;modelOptions" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="269.019,326.2084,264.7725,317.322,265.2168,322.9614,259.5774,323.4056,269.019,326.2084" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[ef7089c42d895d50cabb86e510436fe1]
+link models/user to modelOptions--><path d="M637.23,289.8666 C563.119,300.1751 417.194,320.4731 338.076,331.4782 " fill="none" id="models/user-&gt;modelOptions" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="332.963,332.1894,342.4281,334.9119,337.9154,331.5008,341.3264,326.9881,332.963,332.1894" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[e74f820872f7a38820e21a126a975a74]
+link routes to auth--><path d="M464.966,114.464 C498.376,124.868 558.598,143.623 592.017,154.031 " fill="none" id="routes-&gt;auth" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="597.142,155.627,589.7388,149.1314,592.3682,154.14,587.3596,156.7694,597.142,155.627" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[01640e1de816f142264592994aa4f92d]
+link routes to routes/board--><path d="M415.906,114.013 C383.026,123.203 324.977,139.427 286.001,150.32 " fill="none" id="routes-&gt;routes/board" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="280.871,151.754,290.6155,153.1842,285.6865,150.4083,288.4624,145.4794,280.871,151.754" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[a1d348f3ca2c495558fe2fca1f5617bb]
+link routes to routes/section--><path d="M428.049,118.029 C419.02,125.717 406.811,136.114 396.596,144.813 " fill="none" id="routes-&gt;routes/section" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="392.646,148.177,402.0918,145.3882,396.4531,144.9356,396.9056,139.2969,392.646,148.177" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[9855a92064450a4e8bbed1ab317a1e6b]
+link routes to routes/task--><path d="M453.951,118.029 C463.496,126.157 476.595,137.312 487.134,146.286 " fill="none" id="routes-&gt;routes/task" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="491.182,149.733,486.9224,140.8529,487.3749,146.4916,481.7362,146.9442,491.182,149.733" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[c7105fcbd71e05f5df80eab66eb84ba8]
+link routes/board to controllers/board--><path d="M215.071,173.869 C187.118,183.241 145.738,197.114 114.838,207.474 " fill="none" id="routes/board-&gt;controllers/board" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="109.972,209.105,119.7768,210.036,114.7126,207.5153,117.2332,202.4511,109.972,209.105" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[d0a0132d9d84fe6d2f96130458b5f00c]
+link routes/board to tokenHandler--><path d="M285.159,172.33 C293.342,174.015 301.933,175.667 310,177 C416.439,194.595 444.8,187.012 551,206 C558.33,207.311 566.071,208.938 573.555,210.642 " fill="none" id="routes/board-&gt;tokenHandler" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="578.688,211.83,570.8234,205.9015,573.8171,210.7012,569.0173,213.6949,578.688,211.83" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[12885555b32bcb27fd9014de2929ed68]
+link routes/board to validation--><path d="M267.93,174.959 C286.336,184.576 312.631,198.316 331.88,208.374 " fill="none" id="routes/board-&gt;validation" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="336.613,210.847,330.488,203.1344,332.1813,208.5319,326.7838,210.2252,336.613,210.847" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[08d84a0ece9ed565321952ac29922a42]
+link routes/section to controllers/section--><path d="M346.806,175.098 C323.568,184.024 291.244,196.439 265.879,206.182 " fill="none" id="routes/section-&gt;controllers/section" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="260.903,208.093,270.7388,208.5996,265.5705,206.3,267.8701,201.1317,260.903,208.093" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[6f0c6b92b01b479b8d798b4920bde709]
+link routes/section to tokenHandler--><path d="M417.273,173.273 C460.185,183.687 527.906,200.121 572.142,210.857 " fill="none" id="routes/section-&gt;tokenHandler" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="577.149,212.072,569.3456,206.0631,572.2899,210.8933,567.4597,213.8376,577.149,212.072" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[12de60aac172106fc10a3efab2bbb3ca]
+link routes/section to validation--><path d="M372.26,177.245 C369.467,185.346 365.908,195.666 362.93,204.302 " fill="none" id="routes/section-&gt;validation" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="361.163,209.427,367.879,202.2232,362.7933,204.7003,360.3162,199.6146,361.163,209.427" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[067713a51ce37890c4a3f84d0d3effed]
+link routes/task to controllers/task--><path d="M500.027,175.518 C496.783,183.357 492.482,193.752 488.79,202.675 " fill="none" id="routes/task-&gt;controllers/task" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="486.812,207.455,493.9489,200.6679,488.7235,202.8348,486.5566,197.6095,486.812,207.455" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[bc007d3ee66ed2e26554e0f511792606]
+link routes/task to tokenHandler--><path d="M526.14,174.546 C543.768,183.757 569.021,196.952 588.27,207.01 " fill="none" id="routes/task-&gt;tokenHandler" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="593.026,209.496,586.902,201.7826,588.5946,207.1803,583.1969,208.8729,593.026,209.496" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[5a48705d5a696f45fd8e1178cf0b3049]
+link routes/task to validation--><path d="M478.541,173.869 C452.867,183.93 413.954,199.18 387.109,209.701 " fill="none" id="routes/task-&gt;validation" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="382.242,211.608,392.081,212.0488,386.8974,209.7838,389.1623,204.6002,382.242,211.608" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[06b170f78deab117ebe750bcf6d466c6]
+link tokenHandler to models/user--><path d="M630.538,236.085 C640.684,244.868 654.29,256.6468 665.104,266.0076 " fill="none" id="tokenHandler-&gt;models/user" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="668.95,269.3369,664.7638,260.422,665.1698,266.0643,659.5276,266.4703,668.95,269.3369" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[7a6400c361c2b300793a2237a4e1b873]
+link <b>www</b> to app--><path d="M405.641,21 C408.964,21 412.288,21 415.611,21 " fill="none" id="&lt;b&gt;www&lt;/b&gt;-&gt;app" style="stroke: #000000; stroke-width: 1.0;"/><polygon fill="#000000" points="420.834,21,411.834,17,415.834,21,411.834,25,420.834,21" style="stroke: #000000; stroke-width: 1.0;"/><script type="text/plantuml"><![CDATA[MD5=[e41e61166ed9f2d5263d430237d1a537]
+@startuml
+
+scale max 1920 width
+top to bottom direction
+
+skinparam nodesep 15
+skinparam ranksep 29
+skinparam monochrome true
+skinparam shadowing false
+skinparam defaultFontName Tahoma
+skinparam defaultFontSize 12
+skinparam roundCorner 6
+skinparam dpi 150
+skinparam arrowColor black
+skinparam arrowThickness 0.5
+skinparam packageTitleAlignment left
+
+skinparam usecase {
+  borderThickness 0.5
+}
+
+skinparam rectangle {
+  borderThickness 0.5
+}
+
+skinparam component {
+  borderThickness 1
+}
+
+
+(app)
+(auth)
+(controllers/board)
+(controllers/section)
+(controllers/task)
+(controllers/user)
+(modelOptions)
+(models/board)
+(models/section)
+(models/task)
+(models/user)
+(routes)
+(routes/board)
+(routes/section)
+(routes/task)
+(tokenHandler)
+(validation)
+(<b>www</b>)
+
+
+(app) ---> (routes)
+(auth) --> (controllers/user)
+(auth) --> (models/user)
+(auth) --> (tokenHandler)
+(auth) --> (validation)
+(controllers/board) --> (models/board)
+(controllers/board) --> (models/section)
+(controllers/board) --> (models/task)
+(controllers/section) --> (models/section)
+(controllers/section) --> (models/task)
+(controllers/task) --> (models/section)
+(controllers/task) --> (models/task)
+(controllers/user) --> (models/user)
+(models/board) --> (modelOptions)
+(models/section) --> (modelOptions)
+(models/task) --> (modelOptions)
+(models/user) --> (modelOptions)
+(routes) --> (auth)
+(routes) --> (routes/board)
+(routes) --> (routes/section)
+(routes) --> (routes/task)
+(routes/board) --> (controllers/board)
+(routes/board) --> (tokenHandler)
+(routes/board) --> (validation)
+(routes/section) --> (controllers/section)
+(routes/section) --> (tokenHandler)
+(routes/section) --> (validation)
+(routes/task) --> (controllers/task)
+(routes/task) --> (tokenHandler)
+(routes/task) --> (validation)
+(tokenHandler) --> (models/user)
+(<b>www</b>) -[thickness=1]> (app)
+
+@enduml
+
+
+' View and edit on https://arkit.pro
+]]></script></g></svg>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="662px" preserveAspectRatio="none" style="width:990px;height:662px;" version="1.1" viewBox="0 0 990 662" width="990px" zoomAndPan="magnify"><defs/><g><ellipse cx="25.9706" cy="334.8774" fill="#F8F8F8" rx="19.9706" ry="12.8774" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="24" x="13.9706" y="338.3618">App</text><ellipse cx="129.9619" cy="190.8774" fill="#F8F8F8" rx="48.9619" ry="12.8774" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="65" x="97.4619" y="194.3618">AppLayout</text><ellipse cx="514.6985" cy="251.8774" fill="#F8F8F8" rx="32.6985" ry="12.8774" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="42" x="493.6985" y="255.3618">assets</text><ellipse cx="514.5269" cy="528.8774" fill="#F8F8F8" rx="35.5269" ry="12.8774" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="46" x="491.5269" y="532.3618">authApi</text><ellipse cx="130.0833" cy="281.8774" fill="#F8F8F8" rx="51.0833" ry="12.8774" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="68" x="96.0833" y="285.3618">AuthLayout</text><ellipse cx="376.6838" cy="304.8774" fill="#F8F8F8" rx="41.1838" ry="12.8774" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="54" x="349.6838" y="308.3618">authUtils</text><ellipse cx="928.0833" cy="547.8774" fill="#F8F8F8" rx="51.0833" ry="12.8774" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="68" x="894.0833" y="551.3618">axiosClient</text><ellipse cx="130.163" cy="432.8774" fill="#F8F8F8" rx="29.163" ry="12.8774" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="37" x="111.663" y="436.3618">Board</text><ellipse cx="646.598" cy="384.8774" fill="#F8F8F8" rx="42.598" ry="12.8774" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="56" x="618.598" y="388.3618">boardApi</text><ellipse cx="646.669" cy="240.8774" fill="#F8F8F8" rx="49.669" ry="12.8774" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="66" x="613.669" y="244.3618">boardSlice</text><ellipse cx="376.4423" cy="490.8885" fill="#F8F8F8" rx="52.4423" ry="12.8885" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="70" x="341.4423" y="494.3728">EmojiPicker</text><ellipse cx="376.7237" cy="126.0447" fill="#F8F8F8" rx="55.7237" ry="13.5447" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="79" x="337.2237" y="129.5291">FavouriteList</text><ellipse cx="786.6218" cy="96.9244" fill="#F8F8F8" rx="57.6218" ry="13.9244" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="84" x="744.6218" y="100.4087">favouriteSlice</text><ellipse cx="376.4558" cy="380.8774" fill="#F8F8F8" rx="28.4558" ry="12.8774" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="36" x="358.4558" y="384.3618">Home</text><ellipse cx="376.5269" cy="600.8774" fill="#F8F8F8" rx="35.5269" ry="12.8774" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="46" x="353.5269" y="604.3618">Kanban</text><ellipse cx="250.9411" cy="228.8774" fill="#F8F8F8" rx="36.9411" ry="12.8774" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="48" x="226.9411" y="232.3618">Loading</text><ellipse cx="251.1274" cy="524.8774" fill="#F8F8F8" rx="25.6274" ry="12.8774" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="32" x="235.1274" y="528.3618">Login</text><ellipse cx="786.2548" cy="566.8774" fill="#F8F8F8" rx="48.2548" ry="12.8774" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="64" x="754.2548" y="570.3618">sectionApi</text><ellipse cx="250.9411" cy="152.8774" fill="#F8F8F8" rx="36.9411" ry="12.8774" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="48" x="226.9411" y="156.3618">Sidebar</text><ellipse cx="250.9914" cy="600.8774" fill="#F8F8F8" rx="31.9914" ry="12.8774" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="41" x="230.4914" y="604.3618">Signup</text><ellipse cx="25.7635" cy="161.8774" fill="#F8F8F8" rx="19.2635" ry="12.8774" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="23" x="14.2635" y="165.3618">src</text><ellipse cx="376.3345" cy="20.8774" fill="#F8F8F8" rx="26.3345" ry="12.8774" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="33" x="359.8345" y="24.3618">store</text><ellipse cx="786.5269" cy="608.8774" fill="#F8F8F8" rx="35.5269" ry="12.8774" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="46" x="763.5269" y="612.3618">taskApi</text><ellipse cx="514.669" cy="638.8774" fill="#F8F8F8" rx="49.669" ry="12.8774" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="66" x="481.669" y="642.3618">TaskModal</text><ellipse cx="514.598" cy="58.8774" fill="#F8F8F8" rx="42.598" ry="12.8774" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="56" x="486.598" y="62.3618">userSlice</text><!--MD5=[8da33db050eb87f3e12eb75b56e90b8c]
+link App to AppLayout--><path d="M35.2576,323.189 C45.4909,308.566 63.4779,282.909 79,261 C91.8317,242.888 106.617,222.213 116.762,208.055 " fill="none" id="App-&gt;AppLayout" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="119.755,203.88,111.261,208.8651,116.8423,207.944,117.7634,213.5254,119.755,203.88" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[70f2e3bd747d0b6a46fbc6dfb9a38ebd]
+link App to AuthLayout--><path d="M42.0505,327.18 C57.7851,319.004 82.8087,306.001 101.9795,296.04 " fill="none" id="App-&gt;AuthLayout" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="106.718,293.578,96.8874,294.178,102.2811,295.8833,100.5759,301.277,106.718,293.578" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[330d38cab824a1eae7d762e5005b618a]
+link App to Board--><path d="M37.9158,345.488 C56.0105,362.873 92.2915,397.731 113.19,417.81 " fill="none" id="App-&gt;Board" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="116.905,421.379,113.1863,412.2592,113.2995,417.9149,107.6437,418.028,116.905,421.379" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[72001ba73a07f29f1e30ec17f7d5d965]
+link App to Home--><path d="M45.7369,337.473 C102.369,344.948 272.228,367.369 343.485,376.774 " fill="none" id="App-&gt;Home" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="348.849,377.482,340.4498,372.3387,343.892,376.8277,339.403,380.2699,348.849,377.482" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[c12c7b4f4f89bf532c65e21e4ffcf9c3]
+link App to Login--><path d="M29.3331,347.908 C34.3049,371.899 48.1098,423.674 79,454 C119.009,493.279 183.88,511.993 221.162,519.931 " fill="none" id="App-&gt;Login" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="226.456,521.026,218.453,515.2856,221.5597,520.013,216.8323,523.1197,226.456,521.026" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[49aa87b71b458cfe7ee5caf488b0c2d5]
+link App to Signup--><path d="M27.4528,348.162 C29.201,379.911 37.6985,461.787 79,512 C115.421,556.279 179.671,581.1509 218.196,592.7614 " fill="none" id="App-&gt;Signup" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="223.224,594.2456,215.7249,587.861,218.4286,592.8299,213.4597,595.5336,223.224,594.2456" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[99a66b09eeea96adff5710fbe4e396d7]
+link AppLayout to authUtils--><path d="M176.701,186.989 C209.588,186.155 253.964,189.385 288,208 C308.523,219.224 305.492,231.488 321,249 C333.282,262.87 347.97,277.878 359.001,288.863 " fill="none" id="AppLayout-&gt;authUtils" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="362.593,292.426,359.0204,283.248,359.0432,288.9048,353.3864,288.9276,362.593,292.426" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[427cc5bc91257042f3392c72f8d9b17b]
+link AppLayout to Loading--><path d="M161.955,200.885 C179.203,206.392 200.644,213.239 218.049,218.797 " fill="none" id="AppLayout-&gt;Loading" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="222.845,220.329,215.4884,213.7807,218.082,218.808,213.0547,221.4016,222.845,220.329" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[b241a78df2922b359efd86d8699ad2fc]
+link AppLayout to Sidebar--><path d="M161.955,181.115 C179.203,175.608 200.644,168.761 218.049,163.203 " fill="none" id="AppLayout-&gt;Sidebar" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="222.845,161.671,213.0547,160.5984,218.082,163.192,215.4884,168.2193,222.845,161.671" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[302e681e01c39573a92e15ec4744e217]
+link AppLayout to userSlice--><path d="M144.968,178.57 C160.692,165.204 187.516,144.229 214,132 C299.606,92.473 409.236,72.776 469.277,64.337 " fill="none" id="AppLayout-&gt;userSlice" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="474.575,63.603,465.1115,60.8751,469.6222,64.2887,466.2086,68.7995,474.575,63.603" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[e151375a82447facf14fef11595593ed]
+link authApi to axiosClient--><path d="M549.876,530.587 C621.372,533.888 786.58,541.516 872.647,545.49 " fill="none" id="authApi-&gt;axiosClient" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="877.695,545.723,868.8898,541.3107,872.7004,545.4916,868.5195,549.3021,877.695,545.723" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[213e4ea33633439dc3341000ec228b93]
+link AuthLayout to assets--><path d="M179.057,278.231 C256.691,272.142 407.985,260.276 477.272,254.841 " fill="none" id="AuthLayout-&gt;assets" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="482.518,254.43,473.2325,251.1467,477.5333,254.8213,473.8587,259.1222,482.518,254.43" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[91585090007106b3d9e0b0dfde80c2f9]
+link AuthLayout to authUtils--><path d="M178.142,286.435 C222.547,290.612 288.536,296.819 331.785,300.888 " fill="none" id="AuthLayout-&gt;authUtils" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="336.944,301.373,328.3584,296.5473,331.966,300.9045,327.6088,304.5121,336.944,301.373" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[d5104607e322f93519a1e73ca6a4ade0]
+link AuthLayout to Loading--><path d="M156.237,270.76 C175.691,262.096 202.557,250.13 222.546,241.227 " fill="none" id="AuthLayout-&gt;Loading" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="227.214,239.148,217.3651,239.1586,222.6471,241.1836,220.6221,246.4656,227.214,239.148" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[7e0e135a37f5bff249e69b43ec02da7b]
+link authUtils to authApi--><path d="M392.286,317.431 C404.098,327.908 420.52,343.751 432,360 C467.683,410.506 495.263,479.043 507.134,511.093 " fill="none" id="authUtils-&gt;authApi" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="508.903,515.915,509.5599,506.0881,507.1816,511.2207,502.0489,508.8424,508.903,515.915" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[9a0b90c3ed7c06d0b8331bea18709219]
+link Board to boardApi--><path d="M158.662,430.419 C242.818,422.568 496.336,398.916 600.287,389.218 " fill="none" id="Board-&gt;boardApi" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="605.423,388.739,596.0905,385.592,600.4446,389.2033,596.8333,393.5574,605.423,388.739" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[9f1e4e5f900846da06f76f7ae1350eb0]
+link Board to boardSlice--><path d="M151.911,424.416 C186.719,410.253 258.863,381.424 321,360 C369.778,343.182 383.325,343.112 432,326 C498.005,302.795 573.77,271.494 614.947,254.079 " fill="none" id="Board-&gt;boardSlice" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="619.795,252.025,609.9477,251.8516,615.1909,253.9749,613.0675,259.2181,619.795,252.025" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[cfebde84060ab04907439976f62b5ea8]
+link Board to EmojiPicker--><path d="M150.695,442.293 C167.248,449.744 191.707,459.926 214,466 C249.468,475.664 290.404,481.949 322.187,485.801 " fill="none" id="Board-&gt;EmojiPicker" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="327.208,486.398,318.743,481.3638,322.2429,485.8079,317.7988,489.3079,327.208,486.398" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[4b9487afd8fe0569d0fa2169717f3e7f]
+link Board to favouriteSlice--><path d="M158.076,436.668 C203.108,442.442 296.283,453 375.5,453 C375.5,453 375.5,453 515.5,453 C598.397,453 636.591,463.815 696,406 C779.585,324.658 786.359,170.407 786.017,116.323 " fill="none" id="Board-&gt;favouriteSlice" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="785.96,111.112,782.0605,120.156,786.0157,116.1117,790.06,120.0669,785.96,111.112" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[10fb9d8f73c48889c99d84c1edcf43c8]
+link Board to Kanban--><path d="M137.084,445.838 C148.759,469.136 176.509,518.506 214,546 C234.714,561.1908 301.497,581.045 342.412,592.2699 " fill="none" id="Board-&gt;Kanban" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="347.269,593.5952,339.6388,587.3679,342.4452,592.2795,337.5336,595.0859,347.269,593.5952" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[f743780abfb2626e4d619dc74df2f2b4]
+link boardApi to axiosClient--><path d="M667.154,396.462 C716.828,425.431 847.341,501.544 902.175,533.522 " fill="none" id="boardApi-&gt;axiosClient" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="906.617,536.113,900.8577,528.1236,902.2978,533.5941,896.8274,535.0343,906.617,536.113" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[371b6f0492a9d62401578e9849ed3e5f]
+link FavouriteList to boardApi--><path d="M428.929,130.707 C470.11,136.999 526.929,151.694 564,186 C567.568,189.302 619.31,319.036 638.45,367.223 " fill="none" id="FavouriteList-&gt;boardApi" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="640.303,371.89,640.701,362.0492,638.4586,367.2426,633.2652,365.0002,640.303,371.89" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[197be043441182430be19cf0fbd6d7bb]
+link FavouriteList to favouriteSlice--><path d="M430.004,122.268 C505.925,116.872 645.979,106.917 725.756,101.246 " fill="none" id="FavouriteList-&gt;favouriteSlice" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="730.923,100.879,721.6622,97.5268,725.9356,101.2333,722.2291,105.5067,730.923,100.879" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[07f4a7fd50138e634cbc8318b094c40f]
+link Home to boardApi--><path d="M405.171,381.413 C450.905,382.096 542.758,383.467 598.721,384.302 " fill="none" id="Home-&gt;boardApi" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="604.022,384.381,595.0824,380.2477,599.0226,384.3067,594.9636,388.2469,604.022,384.381" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[e3b2caa9094bb4f25cc51af419d63626]
+link Home to boardSlice--><path d="M404.688,378.353 C442.759,373.63 513.004,361.136 564,330 C594.256,311.527 620.12,278.593 634.181,258.385 " fill="none" id="Home-&gt;boardSlice" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="637.165,254.03,628.7783,259.1937,634.339,258.1547,635.3779,263.7154,637.165,254.03" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[4e8a9ce1dcfa76dd1bd4c9f395a2414d]
+link Kanban to sectionApi--><path d="M409.866,596.5125 C426.347,594.3338 446.716,591.804 465,590 C559.496,580.6763 670.022,573.5831 733.485,569.8763 " fill="none" id="Kanban-&gt;sectionApi" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="738.725,569.5717,729.5082,566.1004,733.7334,569.8617,729.9722,574.087,738.725,569.5717" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[c53c48c028ee0b5d5991e2edfc524a8c]
+link Kanban to taskApi--><path d="M412.286,601.6821 C487.712,603.161 665.926,606.6554 745.693,608.2195 " fill="none" id="Kanban-&gt;taskApi" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="750.802,608.3197,741.8814,604.1456,745.8029,608.2226,741.726,612.1441,750.802,608.3197" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[d8bdffb8eb7d67c8c80dffcdf8b1564a]
+link Kanban to TaskModal--><path d="M405.35,608.7816 C425.435,614.3935 452.8,622.0398 474.979,628.2366 " fill="none" id="Kanban-&gt;TaskModal" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="479.916,629.6163,472.3246,623.3416,475.1005,628.2706,470.1715,631.0465,479.916,629.6163" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[0e52a01f7ee0b1cfb9d26864539a92c0]
+link Login to authApi--><path d="M276.601,525.376 C321.927,526.07 418.986,527.554 473.761,528.392 " fill="none" id="Login-&gt;authApi" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="478.927,528.471,469.9898,524.3326,473.9276,528.3938,469.8663,532.3316,478.927,528.471" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[1385d993dcb821fac5f157b30528c893]
+link sectionApi to axiosClient--><path d="M830.113,561.1961 C845.086,559.1567 862.036,556.8481 877.526,554.7384 " fill="none" id="sectionApi-&gt;axiosClient" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="882.718,554.0313,873.26,551.2843,877.7639,554.707,874.3411,559.2109,882.718,554.0313" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[002572d092fa86f0c89fda203ec05226]
+link Sidebar to assets--><path d="M269.715,164.3 C275.706,168.381 282.314,173.175 288,178 C304.057,191.625 302.546,201.856 321,212 C370.382,239.145 436.128,247.914 476.595,250.719 " fill="none" id="Sidebar-&gt;assets" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="481.889,251.062,473.166,246.4893,476.8994,250.7392,472.6495,254.4726,481.889,251.062" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[dc792017e8a32675a5268fe52af0c14c]
+link Sidebar to boardApi--><path d="M285.547,157.865 C356.819,168.753 520.376,196.827 564,231 C609.433,266.591 632.414,334.67 641.174,367.043 " fill="none" id="Sidebar-&gt;boardApi" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="642.459,371.921,644.0356,362.1991,641.1859,367.0858,636.2993,364.2361,642.459,371.921" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[36cd8c21ef1d6fd1ca4bf0ac270565a5]
+link Sidebar to boardSlice--><path d="M287.875,151.271 C347.242,149.607 468.813,151.307 564,186 C588.042,194.763 611.873,212.122 627.496,225.006 " fill="none" id="Sidebar-&gt;boardSlice" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="631.679,228.51,627.3494,219.6639,627.8465,225.2988,622.2115,225.7959,631.679,228.51" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[2e23071dca56a27b3511f21e761d9ac4]
+link Sidebar to FavouriteList--><path d="M282.846,146.256 C296.839,143.197 313.685,139.514 329.153,136.133 " fill="none" id="Sidebar-&gt;FavouriteList" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="334.34,134.999,324.6936,133.0122,329.4552,136.0662,326.4012,140.8279,334.34,134.999" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[055c84f4a7345e51df531e78f9780434]
+link Signup to authApi--><path d="M276.847,593.1987 C289.947,589.1461 306.307,584.1808 321,580 C376.374,564.2438 441.161,547.406 479.684,537.561 " fill="none" id="Signup-&gt;authApi" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="484.711,536.278,475.0011,534.6294,479.8665,537.5152,476.9806,542.3806,484.711,536.278" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[f39319d2be27e673ece5aa4b202a2579]
+link <b>src</b> to App--><path d="M26,175.11 C26,222.295 26,269.48 26,316.664 " fill="none" id="&lt;b&gt;src&lt;/b&gt;-&gt;App" style="stroke: #000000; stroke-width: 1.0;"/><polygon fill="#000000" points="26,321.822,30,312.822,26,316.822,22,312.822,26,321.822" style="stroke: #000000; stroke-width: 1.0;"/><!--MD5=[3d6a24607757b7bc409ed413750a315e]
+link <b>src</b> to store--><path d="M43.3414,155.388 C99.2126,132.783 282.888,58.47 350.354,31.174 " fill="none" id="&lt;b&gt;src&lt;/b&gt;-&gt;store" style="stroke: #000000; stroke-width: 1.0;"/><polygon fill="#000000" points="355.386,29.138,345.5427,28.8068,350.7512,31.0139,348.5442,36.2224,355.386,29.138" style="stroke: #000000; stroke-width: 1.0;"/><!--MD5=[bd917fa0862a6703b38081e5f7867d9f]
+link store to boardSlice--><path d="M401.135,15.963 C439.432,9.237 515.623,1.984 564,38 C624.931,83.362 640.401,181.764 644.254,222.631 " fill="none" id="store-&gt;boardSlice" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="644.705,227.778,647.9027,218.4627,644.2678,222.7972,639.9333,219.1622,644.705,227.778" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[8e96157fa5c0ceb3eac17e12ae69c250]
+link store to favouriteSlice--><path d="M402.34,17.76 C419.826,15.647 443.801,13.087 465,12 C508.942,9.746 520.736,3.984 564,12 C636.339,25.403 715.562,61.482 756.848,82.069 " fill="none" id="store-&gt;favouriteSlice" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="761.45,84.378,755.1987,76.7674,756.9807,82.1362,751.6119,83.9182,761.45,84.378" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[2a7b337c1d80c0a64718eed960ba4762]
+link store to userSlice--><path d="M399.958,27.275 C421.106,33.184 453.131,42.132 477.783,49.02 " fill="none" id="store-&gt;userSlice" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="482.61,50.369,475.0186,44.0944,477.7945,49.0233,472.8655,51.7992,482.61,50.369" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[eeb5e75808711fd800f60b4473186084]
+link taskApi to axiosClient--><path d="M812.73,600.1926 C822.569,596.61 833.89,592.3039 844,588 C862.806,579.9939 883.518,570.0144 899.547,562.0262 " fill="none" id="taskApi-&gt;axiosClient" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="904.364,559.6154,894.5255,560.0678,899.893,561.8538,898.107,567.2213,904.364,559.6154" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[a30ae8a823cacf9a1c1123b79f3a8760]
+link TaskModal to taskApi--><path d="M560.388,634.0124 C612.618,628.2091 697.965,618.7261 747.2,613.2556 " fill="none" id="TaskModal-&gt;taskApi" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="752.434,612.674,743.0478,609.691,747.4645,613.2254,743.9301,617.6422,752.434,612.674" style="stroke: #000000; stroke-width: 0.5;"/><script type="text/plantuml"><![CDATA[MD5=[5d8ede47b8db6fdd68a23a16c2d4b13e]
+@startuml
+
+scale max 1920 width
+left to right direction
+
+skinparam nodesep 16
+skinparam ranksep 33
+skinparam monochrome true
+skinparam shadowing false
+skinparam defaultFontName Tahoma
+skinparam defaultFontSize 12
+skinparam roundCorner 6
+skinparam dpi 150
+skinparam arrowColor black
+skinparam arrowThickness 0.5
+skinparam packageTitleAlignment left
+
+skinparam usecase {
+  borderThickness 0.5
+}
+
+skinparam rectangle {
+  borderThickness 0.5
+}
+
+skinparam component {
+  borderThickness 1
+}
+
+
+(App)
+(AppLayout)
+(assets)
+(authApi)
+(AuthLayout)
+(authUtils)
+(axiosClient)
+(Board)
+(boardApi)
+(boardSlice)
+(EmojiPicker)
+(FavouriteList)
+(favouriteSlice)
+(Home)
+(Kanban)
+(Loading)
+(Login)
+(sectionApi)
+(Sidebar)
+(Signup)
+(<b>src</b>)
+(store)
+(taskApi)
+(TaskModal)
+(userSlice)
+
+
+(App) --> (AppLayout)
+(App) --> (AuthLayout)
+(App) --> (Board)
+(App) --> (Home)
+(App) --> (Login)
+(App) --> (Signup)
+(AppLayout) ---> (authUtils)
+(AppLayout) --> (Loading)
+(AppLayout) --> (Sidebar)
+(AppLayout) ----> (userSlice)
+(authApi) --> (axiosClient)
+(AuthLayout) ---> (assets)
+(AuthLayout) ---> (authUtils)
+(AuthLayout) --> (Loading)
+(authUtils) --> (authApi)
+(Board) --> (boardApi)
+(Board) ---> (boardSlice)
+(Board) ---> (EmojiPicker)
+(Board) ---> (favouriteSlice)
+(Board) ---> (Kanban)
+(boardApi) --> (axiosClient)
+(FavouriteList) ---> (boardApi)
+(FavouriteList) ----> (favouriteSlice)
+(Home) --> (boardApi)
+(Home) ---> (boardSlice)
+(Kanban) ---> (sectionApi)
+(Kanban) ---> (taskApi)
+(Kanban) --> (TaskModal)
+(Login) --> (authApi)
+(sectionApi) --> (axiosClient)
+(Sidebar) ---> (assets)
+(Sidebar) ---> (boardApi)
+(Sidebar) ----> (boardSlice)
+(Sidebar) --> (FavouriteList)
+(Signup) --> (authApi)
+(<b>src</b>) -[thickness=1]> (App)
+(<b>src</b>) -[thickness=1]> (store)
+(store) --> (boardSlice)
+(store) --> (favouriteSlice)
+(store) --> (userSlice)
+(taskApi) --> (axiosClient)
+(TaskModal) ---> (taskApi)
+
+@enduml
+
+
+' View and edit on https://arkit.pro
+]]></script></g></svg>

@@ -18,6 +18,10 @@ const taskSchema = new Schema({
   },
   position: {
     type: Number
+  },
+  completed: {
+    type: Boolean, 
+    default: false 
   }
 }, schemaOptions)
 

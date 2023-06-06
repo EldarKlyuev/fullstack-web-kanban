@@ -11,7 +11,8 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
     select: false
-  }
+  },
+  completedTasksCount: { type: Number, default: 0 }
 }, schemaOptions)
 
 module.exports = mongoose.model('User', userSchema)
