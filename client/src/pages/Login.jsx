@@ -66,7 +66,7 @@ const Login = () => {
           required
           fullWidth
           id='username'
-          label='Username'
+          label='Логин'
           name='username'
           disabled={loading}
           error={usernameErrText !== ''}
@@ -77,7 +77,7 @@ const Login = () => {
           required
           fullWidth
           id='password'
-          label='Password'
+          label='Пароль'
           name='password'
           type='password'
           disabled={loading}
@@ -92,7 +92,7 @@ const Login = () => {
           type='submit'
           loading={loading}
         >
-          Login
+          Вход
         </LoadingButton>
       </Box>
       <Button
@@ -100,7 +100,7 @@ const Login = () => {
         to='/signup'
         sx={{ textTransform: 'none' }}
       >
-        Don't have an account? Signup
+        У вас нет аккаунта? Регистрация
       </Button>
     </>
   )

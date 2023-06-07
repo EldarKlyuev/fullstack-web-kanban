@@ -135,7 +135,7 @@ const TaskModal = props => {
             <TextField
               value={title}
               onChange={updateTitle}
-              placeholder='Untitled'
+              placeholder='Без заголовка'
               variant='outlined'
               fullWidth
               sx={{

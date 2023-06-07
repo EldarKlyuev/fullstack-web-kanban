@@ -8,18 +8,28 @@ const User = require('../models/user')
 router.post(
   '/signup',
   body('username').isLength({ min: 8 }).withMessage(
-    'username must be at least 8 characters'
+    'Username должен содержать не менее 8 символов'
   ),
   body('password').isLength({ min: 8 }).withMessage(
-    'password must be at least 8 characters'
+    'Пароль должен содержать не менее 8 символов'
   ),
   body('confirmPassword').isLength({ min: 8 }).withMessage(
-    'confirmPassword must be at least 8 characters'
+    'Пароль должен содержать не менее 8 символов'
+  ),
+  body('telegram').isLength({ min: 8 }).withMessage(
+    'Никнейм телеграм должен содержать не менее 8 символов'
   ),
   body('username').custom(value => {
     return User.findOne({ username: value }).then(user => {
       if (user) {
-        return Promise.reject('username already used')
+        return Promise.reject('Логин уже существует')
+      }
+    })
+  }),
+  body('telegram').custom(value => {
+    return User.findOne({ telegram: value }).then(user => {
+      if (user) {
+        return Promise.reject('Данный логин уже существует')
       }
     })
   }),

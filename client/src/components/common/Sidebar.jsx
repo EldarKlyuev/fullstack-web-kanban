@@ -117,7 +117,7 @@ const Sidebar = () => {
             justifyContent: 'space-between'
           }}>
             <Typography variant='body2' fontWeight='700'>
-              Private
+              Доски
             </Typography>
             <IconButton onClick={addBoard}>
               <AddBoxOutlinedIcon fontSize='small' />

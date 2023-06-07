@@ -14,13 +14,11 @@ const boardSchema = new Schema({
   },
   title: {
     type: String,
-    default: 'Untitled'
+    default: 'Без заголовка'
   },
   description: {
     type: String,
-    default: `Add description here
-    🟢 You can add multiline description
-    🟢 Let's start...`
+    default: `Добавьте описание тут`
   },
   position: {
     type: Number

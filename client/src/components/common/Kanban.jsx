@@ -127,10 +127,10 @@ const Kanban = props => {
         justifyContent: 'space-between'
       }}>
         <Button onClick={createSection}>
-          Add section
+          Добавить секцию
         </Button>
         <Typography variant='body2' fontWeight='700'>
-          {data.length} Sections
+          {data.length} Секций
         </Typography>
       </Box>
       <Divider sx={{ margin: '10px 0' }} />
@@ -160,7 +160,7 @@ const Kanban = props => {
                         <TextField
                           value={section.title}
                           onChange={(e) => updateSectionTitle(e, section.id)}
-                          placeholder='Untitled'
+                          placeholder='Без заголовка'
                           variant='outlined'
                           sx={{
                             flexGrow: 1,
@@ -209,7 +209,7 @@ const Kanban = props => {
                                 onClick={() => setSelectedTask(task)}
                               >
                                 <Typography>
-                                  {task.title === '' ? 'Untitled' : task.title}
+                                  {task.title === '' ? 'Без заголовка' : task.title}
                                 </Typography>
                               </Card>
                             )}

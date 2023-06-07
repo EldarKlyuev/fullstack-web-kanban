@@ -56,7 +56,7 @@ const FavouriteList = () => {
           justifyContent: 'space-between'
         }}>
           <Typography variant='body2' fontWeight='700'>
-            Favourites
+            Избаранные
           </Typography>
         </Box>
       </ListItem>

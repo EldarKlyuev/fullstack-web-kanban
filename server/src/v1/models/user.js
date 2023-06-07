@@ -12,7 +12,15 @@ const userSchema = new mongoose.Schema({
     required: true,
     select: false
   },
-  completedTasksCount: { type: Number, default: 0 }
+  completedTasksCount: { 
+    type: Number, 
+    default: 0 
+  },
+  telegram: {
+    type: String,
+    required: true,
+    unique: true
+  },
 }, schemaOptions)
 
 module.exports = mongoose.model('User', userSchema)

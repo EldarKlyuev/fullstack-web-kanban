@@ -11,17 +11,21 @@ const Signup = () => {
   const [usernameErrText, setUsernameErrText] = useState('')
   const [passwordErrText, setPasswordErrText] = useState('')
   const [confirmPasswordErrText, setConfirmPasswordErrText] = useState('')
+  const [telegramErrText, setTelegramErrText] = useState('')
 
   const handleSubmit = async (e) => {
     e.preventDefault()
     setUsernameErrText('')
     setPasswordErrText('')
     setConfirmPasswordErrText('')
+    setTelegramErrText('')
 
     const data = new FormData(e.target)
     const username = data.get('username').trim()
     const password = data.get('password').trim()
     const confirmPassword = data.get('confirmPassword').trim()
+    const telegram = data.get('telegram').trim()
+
 
     let err = false
 
@@ -41,6 +45,10 @@ const Signup = () => {
       err = true
       setConfirmPasswordErrText('Confirm password not match')
     }
+    if (telegram === '') {
+      err = true
+      setTelegramErrText('Please fill this field')
+    }
 
     if (err) return
 
@@ -48,7 +56,7 @@ const Signup = () => {
 
     try {
       const res = await authApi.signup({
-        username, password, confirmPassword
+        username, password, confirmPassword, telegram
       })
       setLoading(false)
       localStorage.setItem('token', res.token)
@@ -64,6 +72,9 @@ const Signup = () => {
           }
           if (e.param === 'confirmPassword') {
             setConfirmPasswordErrText(e.msg)
+          }
+          if (e.param === 'telegram') {
+            setTelegramErrText(e.msg)
           }
         });
         setLoading(false)
@@ -83,7 +94,7 @@ const Signup = () => {
           required
           fullWidth
           id='username'
-          label='Username'
+          label='Логин'
           name='username'
           disabled={loading}
           error={usernameErrText !== ''}
@@ -94,7 +105,7 @@ const Signup = () => {
           required
           fullWidth
           id='password'
-          label='Password'
+          label='Пароль'
           name='password'
           type='password'
           disabled={loading}
@@ -106,12 +117,24 @@ const Signup = () => {
           required
           fullWidth
           id='confirmPassword'
-          label='Confirm Password'
+          label='Подтвердите пароль'
           name='confirmPassword'
           type='password'
           disabled={loading}
           error={confirmPasswordErrText !== ''}
           helperText={confirmPasswordErrText}
+        />
+        <TextField
+          margin='normal'
+          required
+          fullWidth
+          id='telegram'
+          label='Телеграмм'
+          name='telegram'
+          type='telegram'
+          disabled={loading}
+          error={telegramErrText !== ''}
+          helperText={telegramErrText}
         />
         <LoadingButton
           sx={{ mt: 3, mb: 2 }}
@@ -121,7 +144,7 @@ const Signup = () => {
           type='submit'
           loading={loading}
         >
-          Signup
+          Регистрация
         </LoadingButton>
       </Box>
       <Button
@@ -129,7 +152,7 @@ const Signup = () => {
         to='/login'
         sx={{ textTransform: 'none' }}
       >
-        Already have an account? Login
+        Уже есть аккаунт? Вход
       </Button>
     </>
   )
