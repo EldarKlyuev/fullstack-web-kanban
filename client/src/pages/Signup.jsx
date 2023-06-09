@@ -12,6 +12,7 @@ const Signup = () => {
   const [passwordErrText, setPasswordErrText] = useState('')
   const [confirmPasswordErrText, setConfirmPasswordErrText] = useState('')
   const [telegramErrText, setTelegramErrText] = useState('')
+  const [roleErrText, setRoleErrText] = useState('')
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -19,35 +20,41 @@ const Signup = () => {
     setPasswordErrText('')
     setConfirmPasswordErrText('')
     setTelegramErrText('')
+    setRoleErrText('')
 
     const data = new FormData(e.target)
     const username = data.get('username').trim()
     const password = data.get('password').trim()
     const confirmPassword = data.get('confirmPassword').trim()
     const telegram = data.get('telegram').trim()
+    const role = data.get('role').trim()
 
 
     let err = false
 
     if (username === '') {
       err = true
-      setUsernameErrText('Please fill this field')
+      setUsernameErrText('Введите это поле')
     }
     if (password === '') {
       err = true
-      setPasswordErrText('Please fill this field')
+      setPasswordErrText('Введите это поле')
     }
     if (confirmPassword === '') {
       err = true
-      setConfirmPasswordErrText('Please fill this field')
+      setConfirmPasswordErrText('Введите это поле')
     }
     if (password !== confirmPassword) {
       err = true
-      setConfirmPasswordErrText('Confirm password not match')
+      setConfirmPasswordErrText('Пароли не совпадают')
     }
     if (telegram === '') {
       err = true
-      setTelegramErrText('Please fill this field')
+      setTelegramErrText('Введите это поле')
+    }
+    if (role === '') {
+      err = true
+      setRoleErrText('Введите это поле')
     }
 
     if (err) return
@@ -56,7 +63,7 @@ const Signup = () => {
 
     try {
       const res = await authApi.signup({
-        username, password, confirmPassword, telegram
+        username, password, confirmPassword, telegram, role
       })
       setLoading(false)
       localStorage.setItem('token', res.token)
@@ -75,6 +82,9 @@ const Signup = () => {
           }
           if (e.param === 'telegram') {
             setTelegramErrText(e.msg)
+          }
+          if (e.param === 'role') {
+            setRoleErrText(e.msg)
           }
         });
         setLoading(false)
@@ -135,6 +145,18 @@ const Signup = () => {
           disabled={loading}
           error={telegramErrText !== ''}
           helperText={telegramErrText}
+        />
+        <TextField
+          margin='normal'
+          required
+          fullWidth
+          id='role'
+          label='Роль'
+          name='role'
+          type='role'
+          disabled={loading}
+          error={roleErrText !== ''}
+          helperText={roleErrText}
         />
         <LoadingButton
           sx={{ mt: 3, mb: 2 }}

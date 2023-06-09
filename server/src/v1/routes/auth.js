@@ -33,6 +33,12 @@ router.post(
       }
     })
   }),
+  body('role').custom((value, { req }) => {
+    if (value !== 'Админ' && value !== 'Пользователь') {
+      return Promise.reject('Не та роль')
+    }
+    return true;
+  }),
   validation.validate,
   userController.register
 )

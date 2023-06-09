@@ -129,6 +129,15 @@ const Kanban = props => {
         <Button onClick={createSection}>
           Добавить секцию
         </Button>
+        <TextField 
+          margin='normal'
+          id='login'
+          label='login'
+          name='login'
+        />
+        <Button>
+          Добавить пользователя
+        </Button>
         <Typography variant='body2' fontWeight='700'>
           {data.length} Секций
         </Typography>

@@ -23,11 +23,11 @@ const Login = () => {
 
     if (username === '') {
       err = true
-      setUsernameErrText('Please fill this field')
+      setUsernameErrText('Введите это поле')
     }
     if (password === '') {
       err = true
-      setPasswordErrText('Please fill this field')
+      setPasswordErrText('Введите это поле')
     }
 
     if (err) return
