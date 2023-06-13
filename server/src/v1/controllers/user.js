@@ -22,9 +22,26 @@ exports.register = async (req, res) => {
   }
 }
 
+exports.admin = async (req, res) => {
+  try {
+    const user = req.user; // Получаем пользователя из предыдущего middleware
+
+    // Проверяем, что пользователь существует
+    if (!user) {
+      throw new Error('User not found');
+    }
+
+    // Возвращаем значение поля "role" пользователя
+    res.json({ role: user.role });
+  } catch (error) {
+    res.status(401).json({ error: 'Authentication error' });
+  }
+}
+
 exports.login = async (req, res) => {
   const { username, password } = req.body
   try {
+    console.log(username)
     const user = await User.findOne({ username }).select('password username')
     if (!user) {
       return res.status(401).json({

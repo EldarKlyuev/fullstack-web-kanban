@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const { param } = require('express-validator')
+const { param, body } = require('express-validator')
 const validation = require('../handlers/validation')
 const tokenHandler = require('../handlers/tokenHandler')
 const boardController = require('../controllers/board')
@@ -70,5 +70,16 @@ router.delete(
   boardController.delete
 )
 
+router.put(
+  '/:boardId/addUser',
+  param('boardId').custom(value => {
+    if (!validation.isObjectId(value)) {
+      return Promise.reject('invalid id')
+    } else return Promise.resolve()
+  }),
+  validation.validate,
+  tokenHandler.verifyToken,
+  boardController.pushUser
+)
 
 module.exports = router

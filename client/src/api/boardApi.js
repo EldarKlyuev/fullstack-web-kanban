@@ -8,7 +8,8 @@ const boardApi = {
   delete: (id) => axiosClient.delete(`boards/${id}`),
   update: (id, params) => axiosClient.put(`boards/${id}`, params),
   getFavourites: () => axiosClient.get('boards/favourites'),
-  updateFavouritePosition: (params) => axiosClient.put('boards/favourites', params)
+  updateFavouritePosition: (params) => axiosClient.put('boards/favourites', params),
+  addUser: (id, param) => axiosClient.put(`boards/${id}/addUser`, param)
 }
 
 export default boardApi

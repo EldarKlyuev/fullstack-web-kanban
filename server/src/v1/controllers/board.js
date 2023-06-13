@@ -1,6 +1,7 @@
 const Board = require('../models/board')
 const Section = require('../models/section')
 const Task = require('../models/task')
+const User = require('../models/user')
 
 exports.create = async (req, res) => {
   try {
@@ -165,5 +166,35 @@ exports.delete = async (req, res) => {
     res.status(200).json('deleted')
   } catch (err) {
     res.status(500).json(err)
+  }
+}
+
+exports.pushUser = async (req, res) => {
+  const { boardId } = req.params;
+  const { username } = req.body;
+
+  try {
+    console.log(boardId)
+    console.log(username)
+
+
+    const board = await Board.findById(boardId);
+    if (!board) {
+      return res.status(404).json({ error: 'Доска не найдена' });
+    }
+
+    const foundUser = await User.findOne({ username: username });
+    if (!foundUser) {
+      return res.status(404).json({ error: 'Пользователь не найден' })
+    }
+
+    board.user.push(foundUser); // Добавление нового ID пользователя в поле user
+
+    const updatedBoard = await board.save();
+
+    res.json(updatedBoard);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Ошибка сервера' });
   }
 }

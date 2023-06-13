@@ -5,6 +5,8 @@ import AddOutlinedIcon from '@mui/icons-material/AddOutlined'
 import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined'
 import sectionApi from '../../api/sectionApi'
 import taskApi from '../../api/taskApi'
+import userApi from '../../api/userApi'
+import boardApi from '../../api/boardApi'
 import TaskModal from './TaskModal'
 
 let timer
@@ -14,10 +16,56 @@ const Kanban = props => {
   const boardId = props.boardId
   const [data, setData] = useState([])
   const [selectedTask, setSelectedTask] = useState(undefined)
+  const [role, setUserRole] = useState('')
+  const [username, setUsername] = useState('')
+
+
+
 
   useEffect(() => {
     setData(props.data)
   }, [props.data])
+
+  useEffect(() => {
+    const fetchUserRole = async () => {
+      try {
+        const response = await userApi.getAdmin();
+        const role = response.role; // Обновление деструктурирующего присваивания
+        console.log(response)
+
+        if (role) {
+          setUserRole(role);
+        } else {
+          console.error('Ошибка запроса: отсутствует свойство role в ответе');
+        }
+      } catch (error) {
+        console.error('Ошибка запроса: ', error);
+        }
+    };
+
+    fetchUserRole();
+  }, []);
+
+  const handleUsernameChange = (event) => {
+    setUsername(event.target.value);
+  };
+
+  const handleFormSubmit = async () => {
+    try {
+      // Создайте объект с данными для отправки
+      const boardData = {
+        username: username,
+      };
+      console.log(boardData);
+
+      // Выполните PUT-запрос с использованием boardApi из axiosClient
+      const response = await boardApi.addUser(boardId, boardData);
+      console.log(response.data);
+    } catch (error) {
+      // Обработка ошибки
+      console.error(error);
+    }
+  };
 
   const onDragEnd = async ({ source, destination }) => {
     if (!destination) return
@@ -121,27 +169,37 @@ const Kanban = props => {
 
   return (
     <>
-      <Box sx={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between'
-      }}>
-        <Button onClick={createSection}>
-          Добавить секцию
-        </Button>
-        <TextField 
-          margin='normal'
-          id='login'
-          label='login'
-          name='login'
-        />
-        <Button>
-          Добавить пользователя
-        </Button>
-        <Typography variant='body2' fontWeight='700'>
-          {data.length} Секций
-        </Typography>
-      </Box>
+      {role === 'Админ' && (
+        <Box sx={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between'
+        }}>
+          {role === 'Админ' && (
+            <Button onClick={createSection}>
+              Добавить секцию
+            </Button>
+          )}
+          {role === 'Админ' && (
+            <TextField 
+              margin='normal'
+              id='login'
+              label='login'
+              name='login'
+              onChange={handleUsernameChange}
+            />
+          )}
+          {role === 'Админ' && (
+            <Button variant='contained' onClick={handleFormSubmit}>
+              Добавить пользователя
+            </Button>
+          )}
+          
+          <Typography variant='body2' fontWeight='700'>
+            {data.length} Секций
+          </Typography>
+        </Box>
+      )}
       <Divider sx={{ margin: '10px 0' }} />
       <DragDropContext onDragEnd={onDragEnd}>
         <Box sx={{
