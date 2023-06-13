@@ -8,6 +8,7 @@ import taskApi from '../../api/taskApi'
 import userApi from '../../api/userApi'
 import boardApi from '../../api/boardApi'
 import TaskModal from './TaskModal'
+import { toast } from 'react-toastify'
 
 let timer
 const timeout = 500
@@ -18,8 +19,6 @@ const Kanban = props => {
   const [selectedTask, setSelectedTask] = useState(undefined)
   const [role, setUserRole] = useState('')
   const [username, setUsername] = useState('')
-
-
 
 
   useEffect(() => {
@@ -100,7 +99,7 @@ const Kanban = props => {
       })
       setData(data)
     } catch (err) {
-      alert(err)
+      toast.error(err.message);
     }
   }
 
@@ -109,7 +108,7 @@ const Kanban = props => {
       const section = await sectionApi.create(boardId)
       setData([...data, section])
     } catch (err) {
-      alert(err)
+      toast.error(err.message);
     }
   }
 
@@ -119,7 +118,7 @@ const Kanban = props => {
       const newData = [...data].filter(e => e.id !== sectionId)
       setData(newData)
     } catch (err) {
-      alert(err)
+      toast.error(err.message);
     }
   }
 
@@ -134,7 +133,7 @@ const Kanban = props => {
       try {
         await sectionApi.update(boardId, sectionId, { title: newTitle })
       } catch (err) {
-        alert(err)
+        toast.error(err.message);
       }
     }, timeout);
   }
@@ -147,7 +146,7 @@ const Kanban = props => {
       newData[index].tasks.unshift(task)
       setData(newData)
     } catch (err) {
-      alert(err)
+      toast.error(err.message);
     }
   }
 

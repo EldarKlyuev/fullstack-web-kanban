@@ -4,7 +4,17 @@ const Task = require('../models/task')
 const User = require('../models/user')
 
 exports.create = async (req, res) => {
+  const { user } = req
   try {
+    if (!user) {
+      throw new Error('User not found');
+    }
+
+    if (user.role !== 'Админ') {
+      return res.status(403).json({ error: 'У вас нет на это право' });
+    }
+
+
     const boardsCount = await Board.find().count()
     const board = await Board.create({
       user: req.user._id,
@@ -59,10 +69,20 @@ exports.getOne = async (req, res) => {
 }
 
 exports.update = async (req, res) => {
+  const { user } = req
   const { boardId } = req.params
   const { title, description, favourite } = req.body
 
   try {
+    if (!user) {
+      throw new Error('User not found');
+    }
+
+    if (user.role !== 'Админ') {
+      return res.status(403).json({ error: 'У вас нет на это право' });
+    }
+
+    
     if (title === '') req.body.title = 'Untitled'
     if (description === '') req.body.description = 'Add description here'
     const currentBoard = await Board.findById(boardId)
@@ -126,8 +146,17 @@ exports.updateFavouritePosition = async (req, res) => {
 }
 
 exports.delete = async (req, res) => {
+  const { user } = req
   const { boardId } = req.params
   try {
+    console.log(user.role)
+    if (!user) {
+      throw new Error('User not found');
+    }
+
+    if (user.role !== 'Админ') {
+      return res.status(403).json({ error: 'У вас нет на это право' });
+    }
     const sections = await Section.find({ board: boardId })
     for (const section of sections) {
       await Task.deleteMany({ section: section.id })

@@ -5,6 +5,7 @@ import Moment from 'moment'
 import { CKEditor } from '@ckeditor/ckeditor5-react'
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic'
 import taskApi from '../../api/taskApi'
+import { toast } from 'react-toastify';
 
 import '../../css/custom-editor.css'
 
@@ -65,7 +66,7 @@ const TaskModal = props => {
       props.onDelete(task)
       setTask(undefined)
     } catch (err) {
-      alert(err)
+      toast.error(err.message);
     }
   }
 
@@ -76,7 +77,7 @@ const TaskModal = props => {
       try {
         await taskApi.update(boardId, task.id, { title: newTitle })
       } catch (err) {
-        alert(err)
+        toast.error(err.message);
       }
     }, timeout)
 
@@ -96,7 +97,7 @@ const TaskModal = props => {
         try {
           await taskApi.update(boardId, task.id, { content: data })
         } catch (err) {
-          alert(err)
+          toast.error(err.message);
         }
       }, timeout);
 
@@ -171,6 +172,7 @@ const TaskModal = props => {
         </Box>
       </Fade>
     </Modal>
+    
   )
 }
 

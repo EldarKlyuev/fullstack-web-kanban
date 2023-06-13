@@ -33,6 +33,7 @@ exports.admin = async (req, res) => {
 
     // Возвращаем значение поля "role" пользователя
     res.json({ role: user.role });
+    console.log(user.role)
   } catch (error) {
     res.status(401).json({ error: 'Authentication error' });
   }

@@ -2,8 +2,19 @@ const Task = require('../models/task')
 const Section = require('../models/section')
 
 exports.create = async (req, res) => {
+  const { user } = req
   const { sectionId } = req.body
+
   try {
+    if (!user) {
+      throw new Error('User not found');
+    }
+
+    if (user.role !== 'Админ') {
+      return res.status(403).json({ error: 'У вас нет на это право' });
+    }
+
+
     const section = await Section.findById(sectionId)
     const tasksCount = await Task.find({ section: sectionId }).count()
     const task = await Task.create({
@@ -18,8 +29,17 @@ exports.create = async (req, res) => {
 }
 
 exports.update = async (req, res) => {
+  const { user } = req
   const { taskId } = req.params
+
   try {
+    if (!user) {
+      throw new Error('User not found');
+    }
+
+    if (user.role !== 'Админ') {
+      return res.status(403).json({ error: 'У вас нет на это право' });
+    }
     const task = await Task.findByIdAndUpdate(
       taskId,
       { $set: req.body }
@@ -31,8 +51,17 @@ exports.update = async (req, res) => {
 }
 
 exports.delete = async (req, res) => {
+  const { user } = req
   const { taskId } = req.params
+
   try {
+    if (!user) {
+      throw new Error('User not found');
+    }
+    if (user.role !== 'Админ') {
+      return res.status(403).json({ error: 'У вас нет на это право' });
+    }
+
     const currentTask = await Task.findById(taskId)
     await Task.deleteOne({ _id: taskId })
     const tasks = await Task.find({ section: currentTask.section }).sort('postition')
@@ -49,6 +78,7 @@ exports.delete = async (req, res) => {
 }
 
 exports.updatePosition = async (req, res) => {
+  const { user } = req
   const {
     resourceList,
     destinationList,
@@ -57,7 +87,15 @@ exports.updatePosition = async (req, res) => {
   } = req.body
   const resourceListReverse = resourceList.reverse()
   const destinationListReverse = destinationList.reverse()
+
   try {
+    if (!user) {
+      throw new Error('User not found');
+    }
+    if (user.role !== 'Админ') {
+      return res.status(403).json({ error: 'У вас нет на это право' });
+    }
+    
     if (resourceSectionId !== destinationSectionId) {
       for (const key in resourceListReverse) {
         await Task.findByIdAndUpdate(
