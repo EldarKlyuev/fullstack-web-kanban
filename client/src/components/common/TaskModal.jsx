@@ -5,7 +5,7 @@ import Moment from 'moment'
 import { CKEditor } from '@ckeditor/ckeditor5-react'
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic'
 import taskApi from '../../api/taskApi'
-// import userApi from '../../api/userApi'
+import userApi from '../../api/userApi'
 import { toast } from 'react-toastify';
 
 import '../../css/custom-editor.css'
@@ -34,7 +34,7 @@ const TaskModal = props => {
   const [title, setTitle] = useState('')
   const [content, setContent] = useState('')
   const [username, setUsername] = useState('')
-  // const [role, setUserRole] = useState('')
+  const [role, setUserRole] = useState('')
   const editorWrapperRef = useRef()
 
   useEffect(() => {
@@ -48,25 +48,25 @@ const TaskModal = props => {
     }
   }, [props.task])
 
-  // useEffect(() => {
-  //   const fetchUserRole = async () => {
-  //     try {
-  //       const response = await userApi.getAdmin();
-  //       const role = response.role; // Обновление деструктурирующего присваивания
-  //       console.log(response)
+  useEffect(() => {
+    const fetchUserRole = async () => {
+      try {
+        const response = await userApi.getAdmin();
+        const role = response.role; // Обновление деструктурирующего присваивания
+        console.log(response)
 
-  //       if (role) {
-  //         setUserRole(role);
-  //       } else {
-  //         console.error('Ошибка запроса: отсутствует свойство role в ответе');
-  //       }
-  //     } catch (error) {
-  //       console.error('Ошибка запроса: ', error);
-  //       }
-  //   };
+        if (role) {
+          setUserRole(role);
+        } else {
+          console.error('Ошибка запроса: отсутствует свойство role в ответе');
+        }
+      } catch (error) {
+        console.error('Ошибка запроса: ', error);
+        }
+    };
 
-  //   fetchUserRole();
-  // }, []);
+    fetchUserRole();
+  }, []);
 
 
   const updateEditorHeight = () => {
@@ -97,11 +97,18 @@ const TaskModal = props => {
     
   };
 
+  const handleTaskComplite = async () => {
+    try {
+      const response = await taskApi.compliteTask(boardId, task.id);
+      console.log(response.data);
+    } catch (error) {
+      toast.error(error.message);
+    }
+
+  }
+
   const handleFormSubmit = async () => {
     try {
-      // Создайте объект с данными для отправки
-
-      // Выполните PUT-запрос с использованием boardApi из axiosClient
       const response = await taskApi.adduser(boardId, task.id);
       console.log(response.data);
     } catch (error) {
@@ -224,26 +231,38 @@ const TaskModal = props => {
                 onBlur={updateEditorHeight}
               />
             </Box>
-            <Button onClick={handleFormSubmit}>
-              Выбрать задачу
-            </Button>
             <Box sx={{
               width: '100%',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'space-between'
             }}>
-              <TextField 
-                margin='normal'
-                id='login'
-                label='login'
-                name='login'
-                onChange={handleUsernameChange}
-              />
-              <Button variant='contained' onClick={handleFormChangeSubmit}>
-                Изменить исполнителя
+              <Button onClick={handleFormSubmit}>
+                Выбрать задачу
+              </Button>
+              <Button onClick={handleTaskComplite}>
+                Выполнить задачу
               </Button>
             </Box>
+            {role === 'Админ' && (
+              <Box sx={{
+                width: '100%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between'
+              }}>
+                <TextField 
+                  margin='normal'
+                  id='login'
+                  label='login'
+                  name='login'
+                  onChange={handleUsernameChange}
+                />
+                <Button variant='contained' onClick={handleFormChangeSubmit}>
+                  Изменить исполнителя
+                </Button>
+              </Box>
+            )}
           </Box>
         </Box>
       </Fade>

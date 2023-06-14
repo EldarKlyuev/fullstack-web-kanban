@@ -9,6 +9,7 @@ import userApi from '../../api/userApi'
 import boardApi from '../../api/boardApi'
 import TaskModal from './TaskModal'
 import { toast } from 'react-toastify'
+import { ToastContainer } from 'react-toastify';
 
 let timer
 const timeout = 500
@@ -146,7 +147,16 @@ const Kanban = props => {
       newData[index].tasks.unshift(task)
       setData(newData)
     } catch (err) {
-      toast.error(err.message);
+      toast(err.message, {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
     }
   }
 
@@ -291,6 +301,18 @@ const Kanban = props => {
           }
         </Box>
       </DragDropContext>
+      <ToastContainer 
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
       <TaskModal
         task={selectedTask}
         boardId={boardId}

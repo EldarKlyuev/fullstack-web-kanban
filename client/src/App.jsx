@@ -13,7 +13,6 @@ import Board from './pages/Board'
 import Signup from './pages/Signup'
 import Login from './pages/Login'
 import AllUser from './pages/AllUser'
-import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
@@ -24,7 +23,6 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseLine />
-      <ToastContainer />
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<AuthLayout />}>

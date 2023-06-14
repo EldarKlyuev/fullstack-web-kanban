@@ -103,6 +103,8 @@ exports.adduser = async (req, res) => {
     const currentTask = await Task.findById(taskId)
     console.log(currentTask.user)
 
+    
+
     if (!currentTask) {
       return res.status(404).json({ error: 'Задача не найдена' })
     }
@@ -110,8 +112,63 @@ exports.adduser = async (req, res) => {
     if (currentTask.user) {
       return res.status(400).json({ error: 'Пользователь уже указан' });
     } else {
-      currentTask.user = user;
+      currentTask.user = user
     }
+
+    const updatedTask = await currentTask.save()
+
+    const currentUserTask = await User.findById(currentTask.user)
+
+    currentUserTask.currentTask = currentTask.title
+    currentUserTask.save()
+    console.log(currentUserTask)
+
+    res.json(updatedTask)
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Ошибка сервера' });
+  }
+}
+
+exports.compliteTask = async (req, res) => {
+  const { taskId } = req.params
+  const { user } = req
+
+  try {
+    // console.log(taskId)
+    // console.log(user._id)
+    if (!user) {
+      throw new Error('User not found');
+    }
+
+    const currentTask = await Task.findById(taskId)
+    
+
+    if (!currentTask) {
+      return res.status(404).json({ error: 'Задача не найдена' })
+    }
+
+    if (currentTask.user === 'undefined') {
+      return res.status(404).json({ error: 'Пользователь не указан' })
+    }
+
+    const currentUserTask = await User.findById(currentTask.user)
+
+    console.log(currentUserTask)
+
+    if (currentTask.completed === true) {
+      return res.status(400).json({ error: 'Задача уже выполнена' });
+    } else {
+      currentTask.completed = true
+      console.log(currentTask.completed)
+
+      currentUserTask.completedTasksCount++
+
+      currentUserTask.complitedTasks.push(currentTask.title)
+      console.log(currentUserTask.complitedTasks)
+      currentUserTask.save()
+    }
+
 
     const updatedTask = await currentTask.save()
 

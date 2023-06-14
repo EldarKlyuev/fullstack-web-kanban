@@ -23,6 +23,10 @@ const taskApi = {
     `boards/${boardId}/tasks/${taskId}/changeUser`,
     params
   ),
+  compliteTask: (boardId, taskId, params) => axiosClient.put(
+    `boards/${boardId}/tasks/${taskId}/compliteTask`,
+    params
+  )
 }
 
 export default taskApi
