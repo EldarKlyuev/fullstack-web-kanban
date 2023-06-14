@@ -5,7 +5,7 @@ import Moment from 'moment'
 import { CKEditor } from '@ckeditor/ckeditor5-react'
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic'
 import taskApi from '../../api/taskApi'
-import userApi from '../../api/userApi'
+// import userApi from '../../api/userApi'
 import { toast } from 'react-toastify';
 
 import '../../css/custom-editor.css'
@@ -34,7 +34,7 @@ const TaskModal = props => {
   const [title, setTitle] = useState('')
   const [content, setContent] = useState('')
   const [username, setUsername] = useState('')
-  const [role, setUserRole] = useState('')
+  // const [role, setUserRole] = useState('')
   const editorWrapperRef = useRef()
 
   useEffect(() => {
@@ -48,25 +48,25 @@ const TaskModal = props => {
     }
   }, [props.task])
 
-  useEffect(() => {
-    const fetchUserRole = async () => {
-      try {
-        const response = await userApi.getAdmin();
-        const role = response.role; // Обновление деструктурирующего присваивания
-        console.log(response)
+  // useEffect(() => {
+  //   const fetchUserRole = async () => {
+  //     try {
+  //       const response = await userApi.getAdmin();
+  //       const role = response.role; // Обновление деструктурирующего присваивания
+  //       console.log(response)
 
-        if (role) {
-          setUserRole(role);
-        } else {
-          console.error('Ошибка запроса: отсутствует свойство role в ответе');
-        }
-      } catch (error) {
-        console.error('Ошибка запроса: ', error);
-        }
-    };
+  //       if (role) {
+  //         setUserRole(role);
+  //       } else {
+  //         console.error('Ошибка запроса: отсутствует свойство role в ответе');
+  //       }
+  //     } catch (error) {
+  //       console.error('Ошибка запроса: ', error);
+  //       }
+  //   };
 
-    fetchUserRole();
-  }, []);
+  //   fetchUserRole();
+  // }, []);
 
 
   const updateEditorHeight = () => {

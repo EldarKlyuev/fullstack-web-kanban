@@ -22,6 +22,16 @@ exports.register = async (req, res) => {
   }
 }
 
+exports.getAllUsers = async (req, res) => {
+  try {
+    const users = await User.find();
+    res.json(users);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Ошибка сервера' });
+  }
+}
+
 exports.admin = async (req, res) => {
   try {
     const user = req.user; // Получаем пользователя из предыдущего middleware

@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux'
-import { Box, Drawer, IconButton, List, ListItem, ListItemButton, Typography } from '@mui/material'
+import { Box, Button, Drawer, IconButton, List, ListItem, ListItemButton, Typography } from '@mui/material'
 import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined'
 import AddBoxOutlinedIcon from '@mui/icons-material/AddBoxOutlined'
 import { Link, useNavigate, useParams } from 'react-router-dom'
@@ -9,6 +9,7 @@ import boardApi from '../../api/boardApi'
 import { setBoards } from '../../redux/features/boardSlice'
 import { DragDropContext, Draggable, Droppable } from 'react-beautiful-dnd'
 import FavouriteList from './FavouriteList'
+import userApi from '../../api/userApi'
 
 const Sidebar = () => {
   const user = useSelector((state) => state.user.value)
@@ -17,8 +18,29 @@ const Sidebar = () => {
   const dispatch = useDispatch()
   const { boardId } = useParams()
   const [activeIndex, setActiveIndex] = useState(0)
+  const [role, setUserRole] = useState('')
 
   const sidebarWidth = 250
+
+  useEffect(() => {
+    const fetchUserRole = async () => {
+      try {
+        const response = await userApi.getAdmin();
+        const role = response.role; // Обновление деструктурирующего присваивания
+        console.log(response)
+
+        if (role) {
+          setUserRole(role);
+        } else {
+          console.error('Ошибка запроса: отсутствует свойство role в ответе');
+        }
+      } catch (error) {
+        console.error('Ошибка запроса: ', error);
+        }
+    };
+
+    fetchUserRole();
+  }, []);
 
   useEffect(() => {
     const getBoards = async () => {
@@ -106,6 +128,20 @@ const Sidebar = () => {
             </IconButton>
           </Box>
         </ListItem>
+        <Box sx={{
+          width: '100%',
+          display: 'flex',
+          alignItems: 'center'
+        }}>
+          {role === 'Админ' && (
+            <Button
+              component={Link}
+              to='/users'
+              sx={{ textTransform: 'none' }}>
+              Все пользователи
+            </Button>
+          )}
+        </Box>
         <Box sx={{ paddingTop: '10px' }} />
         <FavouriteList />
         <Box sx={{ paddingTop: '10px' }} />

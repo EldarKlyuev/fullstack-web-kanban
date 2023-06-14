@@ -12,6 +12,7 @@ import Home from './pages/Home'
 import Board from './pages/Board'
 import Signup from './pages/Signup'
 import Login from './pages/Login'
+import AllUser from './pages/AllUser'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -35,6 +36,7 @@ function App() {
             <Route path='boards' element={<Home />} />
             <Route path='boards/:boardId' element={<Board />} />
           </Route>
+          <Route path='users' element={<AllUser />} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>

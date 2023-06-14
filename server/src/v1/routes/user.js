@@ -10,4 +10,10 @@ router.get(
   userController.admin
 )
 
+router.get(
+  '/allusers',
+  tokenHandler.verifyToken,
+  userController.getAllUsers
+)
+
 module.exports = router

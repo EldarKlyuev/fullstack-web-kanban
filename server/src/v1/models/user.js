@@ -25,7 +25,17 @@ const userSchema = new mongoose.Schema({
     type: String,
     require: true,
     default: 'Пользователь'
-  }
+  },
+  currentTask: {
+    type: String,
+    require: true,
+    default: 'Без задачи'
+  },
+  complitedTasks: [{
+    type: String,
+    require: true,
+    default: 'Ещё не было выполненных задач'
+  }]
 }, schemaOptions)
 
 module.exports = mongoose.model('User', userSchema)
