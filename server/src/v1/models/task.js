@@ -3,6 +3,11 @@ const Schema = mongoose.Schema
 const { schemaOptions } = require('./modelOptions')
 
 const taskSchema = new Schema({
+  user: {
+    type: Schema.Types.ObjectId,
+    ref: 'User',
+    required: false
+  },
   section: {
     type: Schema.Types.ObjectId,
     ref: 'Section',
@@ -23,6 +28,7 @@ const taskSchema = new Schema({
     type: Boolean, 
     default: false 
   }
+  
 }, schemaOptions)
 
 module.exports = mongoose.model('Task', taskSchema)

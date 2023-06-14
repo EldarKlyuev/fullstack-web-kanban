@@ -67,4 +67,55 @@ router.put(
   taskController.update
 )
 
+router.put(
+  '/:taskId/adduser',
+  param('boardId').custom(value => {
+    if (!validation.isObjectId(value)) {
+      return Promise.reject('invalid board id')
+    } else return Promise.resolve()
+  }),
+  param('taskId').custom(value => {
+    if (!validation.isObjectId(value)) {
+      return Promise.reject('invalid task id')
+    } else return Promise.resolve()
+  }),
+  validation.validate,
+  tokenHandler.verifyToken,
+  taskController.adduser
+)
+
+router.get(
+  '/:taskId/getuser',
+  param('boardId').custom(value => {
+    if (!validation.isObjectId(value)) {
+      return Promise.reject('invalid board id')
+    } else return Promise.resolve()
+  }),
+  param('taskId').custom(value => {
+    if (!validation.isObjectId(value)) {
+      return Promise.reject('invalid task id')
+    } else return Promise.resolve()
+  }),
+  validation.validate,
+  tokenHandler.verifyToken,
+  taskController.getuser
+)
+
+router.put(
+  '/:taskId/changeuser',
+  param('boardId').custom(value => {
+    if (!validation.isObjectId(value)) {
+      return Promise.reject('invalid board id')
+    } else return Promise.resolve()
+  }),
+  param('taskId').custom(value => {
+    if (!validation.isObjectId(value)) {
+      return Promise.reject('invalid task id')
+    } else return Promise.resolve()
+  }),
+  validation.validate,
+  tokenHandler.verifyToken,
+  taskController.changeUser
+)
+
 module.exports = router

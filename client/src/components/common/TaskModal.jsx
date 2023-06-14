@@ -1,10 +1,11 @@
-import { Backdrop, Fade, IconButton, Modal, Box, TextField, Typography, Divider } from '@mui/material'
+import { Backdrop, Fade, IconButton, Modal, Box, TextField, Typography, Divider, Button } from '@mui/material'
 import React, { useEffect, useRef, useState } from 'react'
 import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined'
 import Moment from 'moment'
 import { CKEditor } from '@ckeditor/ckeditor5-react'
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic'
 import taskApi from '../../api/taskApi'
+import userApi from '../../api/userApi'
 import { toast } from 'react-toastify';
 
 import '../../css/custom-editor.css'
@@ -32,6 +33,8 @@ const TaskModal = props => {
   const [task, setTask] = useState(props.task)
   const [title, setTitle] = useState('')
   const [content, setContent] = useState('')
+  const [username, setUsername] = useState('')
+  const [role, setUserRole] = useState('')
   const editorWrapperRef = useRef()
 
   useEffect(() => {
@@ -45,6 +48,27 @@ const TaskModal = props => {
     }
   }, [props.task])
 
+  useEffect(() => {
+    const fetchUserRole = async () => {
+      try {
+        const response = await userApi.getAdmin();
+        const role = response.role; // Обновление деструктурирующего присваивания
+        console.log(response)
+
+        if (role) {
+          setUserRole(role);
+        } else {
+          console.error('Ошибка запроса: отсутствует свойство role в ответе');
+        }
+      } catch (error) {
+        console.error('Ошибка запроса: ', error);
+        }
+    };
+
+    fetchUserRole();
+  }, []);
+
+
   const updateEditorHeight = () => {
     setTimeout(() => {
       if (editorWrapperRef.current) {
@@ -53,6 +77,38 @@ const TaskModal = props => {
       }
     }, timeout)
   }
+  const handleUsernameChange = (event) => {
+    setUsername(event.target.value);
+  };
+
+  const handleFormChangeSubmit = async () => {
+    try {
+      const taskData = {
+        username: username,
+      };
+      console.log(taskData);
+      const response = await taskApi.changeuser(boardId, task.id, taskData);
+      console.log(response.data);
+
+    } catch (error) {
+      // Обработка ошибки
+      toast.error(error.message);
+    }
+    
+  };
+
+  const handleFormSubmit = async () => {
+    try {
+      // Создайте объект с данными для отправки
+
+      // Выполните PUT-запрос с использованием boardApi из axiosClient
+      const response = await taskApi.adduser(boardId, task.id);
+      console.log(response.data);
+    } catch (error) {
+      // Обработка ошибки
+      toast.error(error.message);
+    }
+  };
 
   const onClose = () => {
     isModalClosed = true
@@ -167,6 +223,26 @@ const TaskModal = props => {
                 onFocus={updateEditorHeight}
                 onBlur={updateEditorHeight}
               />
+            </Box>
+            <Button onClick={handleFormSubmit}>
+              Выбрать задачу
+            </Button>
+            <Box sx={{
+              width: '100%',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'space-between'
+            }}>
+              <TextField 
+                margin='normal'
+                id='login'
+                label='login'
+                name='login'
+                onChange={handleUsernameChange}
+              />
+              <Button variant='contained' onClick={handleFormChangeSubmit}>
+                Изменить исполнителя
+              </Button>
             </Box>
           </Box>
         </Box>

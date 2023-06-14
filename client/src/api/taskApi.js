@@ -10,7 +10,19 @@ const taskApi = {
   update: (boardId, taskId, params) => axiosClient.put(
     `boards/${boardId}/tasks/${taskId}`,
     params
-  )
+  ),
+  adduser: (boardId, taskId, params) => axiosClient.put(
+    `boards/${boardId}/tasks/${taskId}/adduser`,
+    params
+  ),
+  getuser: (boardId, taskId, params) => axiosClient.get(
+    `boards/${boardId}/tasks/${taskId}/getuser`,
+    params
+  ),
+  changeuser: (boardId, taskId, params) => axiosClient.put(
+    `boards/${boardId}/tasks/${taskId}/changeUser`,
+    params
+  ),
 }
 
 export default taskApi
