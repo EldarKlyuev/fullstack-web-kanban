@@ -271,8 +271,6 @@ const TaskModal = props => {
         </Box>
       </Fade>
     </Modal>
-    
-    
   )
 }
 

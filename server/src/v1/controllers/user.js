@@ -22,6 +22,40 @@ exports.register = async (req, res) => {
   }
 }
 
+exports.changeUser = async (req, res) => {
+  const { username, telegram, role } = req.body;
+
+  try {
+    const userchange = await User.findOne({ username })
+    console.log(telegram)
+    console.log(role)
+    console.log(userchange.username)
+
+    if (!userchange) {
+      return res.status(401).json({
+        errors: [
+          {
+            param: 'username',
+            msg: 'Invalid username'
+          }
+        ]
+      })
+    }
+
+    const user = await User.findByIdAndUpdate(
+      userchange._id,
+      { telegram, role },
+      {new: true}
+    );
+    console.log(user)
+
+
+    res.json(user);
+  } catch (error) {
+    res.status(500).json({ error: 'Ошибка сервера' });
+  }
+}
+
 exports.getAllUsers = async (req, res) => {
   try {
     const users = await User.find();
