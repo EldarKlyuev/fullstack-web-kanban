@@ -10,6 +10,9 @@ import { setBoards } from '../../redux/features/boardSlice'
 import { DragDropContext, Draggable, Droppable } from 'react-beautiful-dnd'
 import FavouriteList from './FavouriteList'
 import userApi from '../../api/userApi'
+import { toast } from 'react-toastify'
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Sidebar = () => {
   const user = useSelector((state) => state.user.value)
@@ -90,7 +93,7 @@ const Sidebar = () => {
       dispatch(setBoards(newList))
       navigate(`/boards/${res.id}`)
     } catch (err) {
-      alert(err)
+      toast.error('У вас нет на это прав')
     }
   }
 
@@ -197,6 +200,18 @@ const Sidebar = () => {
             )}
           </Droppable>
         </DragDropContext>
+        <ToastContainer 
+          position="top-right"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="dark"
+        />
       </List>
     </Drawer>
   )

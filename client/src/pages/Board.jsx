@@ -10,6 +10,9 @@ import EmojiPicker from '../components/common/EmojiPicker'
 import Kanban from '../components/common/Kanban'
 import { setBoards } from '../redux/features/boardSlice'
 import { setFavouriteList } from '../redux/features/favouriteSlice'
+import { toast } from 'react-toastify'
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 let timer
 const timeout = 500
@@ -60,7 +63,7 @@ const Board = () => {
     try {
       await boardApi.update(boardId, { icon: newIcon })
     } catch (err) {
-      alert(err)
+      toast.error('У вас нет на это прав')
     }
   }
 
@@ -86,7 +89,7 @@ const Board = () => {
       try {
         await boardApi.update(boardId, { title: newTitle })
       } catch (err) {
-        alert(err)
+        toast.error('У вас нет на это прав')
       }
     }, timeout);
   }
@@ -99,7 +102,7 @@ const Board = () => {
       try {
         await boardApi.update(boardId, { description: newDescription })
       } catch (err) {
-        alert(err)
+        toast.error('У вас нет на это прав')
       }
     }, timeout);
   }
@@ -116,7 +119,7 @@ const Board = () => {
       dispatch(setFavouriteList(newFavouriteList))
       setIsFavourite(!isFavourite)
     } catch (err) {
-      alert(err)
+      toast.error('У вас нет на это прав')
     }
   }
 
@@ -136,7 +139,7 @@ const Board = () => {
       }
       dispatch(setBoards(newList))
     } catch (err) {
-      alert(err)
+      toast.error('У вас нет на это прав')
     }
   }
 
@@ -196,6 +199,18 @@ const Board = () => {
           <Kanban data={sections} boardId={boardId} />
         </Box>
       </Box>
+      <ToastContainer 
+          position="top-right"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="dark"
+        />
     </>
   )
 }

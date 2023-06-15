@@ -6,7 +6,8 @@ import { CKEditor } from '@ckeditor/ckeditor5-react'
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic'
 import taskApi from '../../api/taskApi'
 import userApi from '../../api/userApi'
-import { toast } from 'react-toastify';
+import { toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 
 import '../../css/custom-editor.css'
 
@@ -89,10 +90,11 @@ const TaskModal = props => {
       console.log(taskData);
       const response = await taskApi.changeuser(boardId, task.id, taskData);
       console.log(response.data);
+      toast.success('Испольнитель задачи изменен!')
 
     } catch (error) {
       // Обработка ошибки
-      toast.error(error.message);
+      toast.error('Что-то пошло не так!');
     }
     
   };
@@ -101,8 +103,9 @@ const TaskModal = props => {
     try {
       const response = await taskApi.compliteTask(boardId, task.id);
       console.log(response.data);
+      toast.success('Вы выполнили эту задачу!')
     } catch (error) {
-      toast.error(error.message);
+      toast.warn('Эта задача уже выполнена!');
     }
 
   }
@@ -111,9 +114,10 @@ const TaskModal = props => {
     try {
       const response = await taskApi.adduser(boardId, task.id);
       console.log(response.data);
+      toast.success('Вы добавили себя в эту задачу!')
     } catch (error) {
       // Обработка ошибки
-      toast.error(error.message);
+      toast.warn('Эта задача уже занята другим сотрудником!')
     }
   };
 
@@ -129,7 +133,7 @@ const TaskModal = props => {
       props.onDelete(task)
       setTask(undefined)
     } catch (err) {
-      toast.error(err.message);
+      toast.error('У вас нет на это прав. Обновите страницу')
     }
   }
 
@@ -140,7 +144,7 @@ const TaskModal = props => {
       try {
         await taskApi.update(boardId, task.id, { title: newTitle })
       } catch (err) {
-        toast.error(err.message);
+        toast.error('У вас нет на это прав. Обновите страницу')
       }
     }, timeout)
 
@@ -160,7 +164,7 @@ const TaskModal = props => {
         try {
           await taskApi.update(boardId, task.id, { content: data })
         } catch (err) {
-          toast.error(err.message);
+          toast.error('У вас нет на это прав. Обновите страницу')
         }
       }, timeout);
 
@@ -267,6 +271,7 @@ const TaskModal = props => {
         </Box>
       </Fade>
     </Modal>
+    
     
   )
 }

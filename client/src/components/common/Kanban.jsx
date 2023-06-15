@@ -10,6 +10,7 @@ import boardApi from '../../api/boardApi'
 import TaskModal from './TaskModal'
 import { toast } from 'react-toastify'
 import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 let timer
 const timeout = 500
@@ -61,9 +62,10 @@ const Kanban = props => {
       // Выполните PUT-запрос с использованием boardApi из axiosClient
       const response = await boardApi.addUser(boardId, boardData);
       console.log(response.data);
+      toast.success('Данный пользователь добавлен на доску!')
     } catch (error) {
       // Обработка ошибки
-      console.error(error);
+      toast.error('Что-то пошло не так!')
     }
   };
 
@@ -100,7 +102,7 @@ const Kanban = props => {
       })
       setData(data)
     } catch (err) {
-      toast.error(err.message);
+      toast.error('У вас нет на это прав. Обновите страницу')
     }
   }
 
@@ -109,7 +111,7 @@ const Kanban = props => {
       const section = await sectionApi.create(boardId)
       setData([...data, section])
     } catch (err) {
-      toast.error(err.message);
+      toast.error('У вас нет на это прав. Обновите страницу')
     }
   }
 
@@ -119,7 +121,7 @@ const Kanban = props => {
       const newData = [...data].filter(e => e.id !== sectionId)
       setData(newData)
     } catch (err) {
-      toast.error(err.message);
+      toast.error('У вас нет на это прав. Обновите страницу')
     }
   }
 
@@ -134,7 +136,7 @@ const Kanban = props => {
       try {
         await sectionApi.update(boardId, sectionId, { title: newTitle })
       } catch (err) {
-        toast.error(err.message);
+        toast.error('У вас нет на это прав. Обновите страницу')
       }
     }, timeout);
   }
@@ -147,16 +149,7 @@ const Kanban = props => {
       newData[index].tasks.unshift(task)
       setData(newData)
     } catch (err) {
-      toast(err.message, {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "dark",
-      });
+      toast.error('У вас нет на это прав. Обновите страницу')
     }
   }
 
@@ -300,6 +293,7 @@ const Kanban = props => {
             ))
           }
         </Box>
+        <ToastContainer />
       </DragDropContext>
       <ToastContainer 
         position="top-right"

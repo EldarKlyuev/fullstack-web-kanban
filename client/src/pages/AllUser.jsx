@@ -36,7 +36,7 @@ const AllUser = () => {
             <Typography variant="h5" component="h2">
               {user.username}
             </Typography>
-            <Typography color="textSecondary">Тэг телеграм: {user.telegram}</Typography>
+            <Typography color="textSecondary">Тэг телеграм: <b>{user.telegram}</b></Typography>
             <Typography color="textSecondary">Роль в системе: {user.role}</Typography>
             <Typography color="textSecondary">
               Выполненых задач: {user.completedTasksCount}
