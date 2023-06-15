@@ -41,7 +41,13 @@ const AllUser = () => {
             <Typography color="textSecondary">
               Выполненых задач: {user.completedTasksCount}
             </Typography>
-            <Typography color="textSecondary">Текущая задача: {user.currentTask}</Typography>
+            <Typography color="textSecondary"> Текущие задачи: 
+                <ul>
+                {user.currentTask.map((task) => (
+                    <li key={task}>{task}</li>
+                ))}
+                </ul>
+            </Typography>
             <Typography color="textSecondary">Выполненные задачи:</Typography>
             <ul>
               {user.complitedTasks.map((task) => (

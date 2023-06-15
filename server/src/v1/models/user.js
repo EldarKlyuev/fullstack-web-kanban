@@ -26,11 +26,11 @@ const userSchema = new mongoose.Schema({
     require: true,
     default: 'Пользователь'
   },
-  currentTask: {
+  currentTask: [{
     type: String,
     require: true,
     default: 'Без задачи'
-  },
+  }],
   complitedTasks: [{
     type: String,
     require: true,

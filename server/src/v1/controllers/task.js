@@ -119,7 +119,7 @@ exports.adduser = async (req, res) => {
 
     const currentUserTask = await User.findById(currentTask.user)
 
-    currentUserTask.currentTask = currentTask.title
+    currentUserTask.currentTask.push(currentTask.title)
     currentUserTask.save()
     console.log(currentUserTask)
 
@@ -148,19 +148,20 @@ exports.compliteTask = async (req, res) => {
       return res.status(404).json({ error: 'Задача не найдена' })
     }
 
-    if (currentTask.user === 'undefined') {
+    if (currentTask.user === undefined) {
       return res.status(404).json({ error: 'Пользователь не указан' })
     }
 
     const currentUserTask = await User.findById(currentTask.user)
 
-    console.log(currentUserTask)
+    console.log(currentUserTask.currentTask)
 
     if (currentTask.completed === true) {
       return res.status(400).json({ error: 'Задача уже выполнена' });
     } else {
       currentTask.completed = true
       console.log(currentTask.completed)
+      currentUserTask.currentTask = currentUserTask.currentTask.filter((item) => item !== currentTask.title)
 
       currentUserTask.completedTasksCount++
 
