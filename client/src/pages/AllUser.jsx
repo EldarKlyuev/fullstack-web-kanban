@@ -4,6 +4,11 @@ import { Card, CardContent, Typography, Box, Button } from '@mui/material';
 import { styled } from '@mui/system';
 import UserModal from './UserModal';
 import { ToastContainer } from 'react-toastify';
+import { toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
+import pdfMake from "pdfmake/build/pdfmake";
+import pdfFonts from "pdfmake/build/vfs_fonts";
+pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
 const StyledCard = styled(Card)(({ theme }) => ({
     marginBottom: theme.spacing(2),
@@ -14,6 +19,7 @@ const StyledCard = styled(Card)(({ theme }) => ({
 const AllUser = () => {
   const [users, setUsers] = useState([]);
   const [open, setOpen] = useState(false);
+  const [pdfData, setPdfData] = useState('');
 
   useEffect(() => {
     const fetchUsers = async () => {
@@ -38,6 +44,58 @@ const AllUser = () => {
     setOpen(false);
   };
 
+  const generatePDF = () => {
+    console.log(users)
+    // Создание JSON-объекта для генерации PDF
+    const jsonData = users.map(user => ({
+      username: user.username,
+      completedTasksCount: user.completedTasksCount,
+      telegram: user.telegram,
+      role: user.role,
+      currentTask: user.currentTask,
+      complitedTasks: user.complitedTasks
+    }));
+      
+      // ... другие объекты пользователей
+    console.log(jsonData)
+
+    // Определение шаблонов для PDF
+
+    const docDefinition = {
+      content: [
+        { text: 'Пользователи', style: 'header' },
+        {
+          ul: jsonData.flatMap(user => ([
+            { text: `Username: ${user.username}`, margin: [0, 0, 0, 5] },
+            { text: `Completed Tasks Count: ${user.completedTasksCount}`, margin: [0, 0, 0, 5] },
+            { text: `Telegram: ${user.telegram}`, margin: [0, 0, 0, 5] },
+            { text: `Role: ${user.role}`, margin: [0, 0, 0, 5] },
+            { text: `Current Tasks: ${user.currentTask.join(', ')}`, margin: [0, 0, 0, 5] },
+            { text: `Completed Tasks: ${user.complitedTasks.join(', ')}`, margin: [0, 0, 0, 20] }
+          ]))
+        }
+      ],
+      styles: {
+        header: {
+          fontSize: 18,
+          bold: true,
+          margin: [0, 0, 0, 10]
+        }
+      }
+    };
+    
+
+    console.log(docDefinition)
+
+    // Создание PDF-документа
+    const pdfDocGenerator = pdfMake.createPdf(docDefinition);
+
+    // Сохранение PDF-файла
+    pdfDocGenerator.getBlob((blob) => {
+      setPdfData(blob);
+    });
+  };
+
   return (
     <div>
       <Box sx={{
@@ -58,6 +116,20 @@ const AllUser = () => {
       }}>
         <Button sx={{ fontSize: "1.2rem", padding: '12px'}} onClick={handleOpen}>
           Изменить
+        </Button>
+        <Button sx={{ fontSize: "1.2rem", padding: '12px'}} onClick={() => {
+          try {
+            generatePDF();
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(pdfData);
+            link.download = 'users.pdf';
+            link.click();
+            toast.success('Файл сохранен')
+          } catch (error) {
+            toast.error('Что-то пошло не так! Попробуйте ещё раз!');
+          }
+        }}>
+          Скачать отчёт
         </Button>
       </Box>
       <UserModal open={open} handleClose={() => setOpen(false)} />
