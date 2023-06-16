@@ -40,10 +40,6 @@ const AllUser = () => {
     setOpen(true);
   };
 
-  const handleClose = () => {
-    setOpen(false);
-  };
-
   const generatePDF = () => {
     console.log(users)
     // Создание JSON-объекта для генерации PDF

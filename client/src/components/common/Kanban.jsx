@@ -70,7 +70,7 @@ const Kanban = props => {
       toast.success('Данный пользователь добавлен на доску!')
     } catch (error) {
       // Обработка ошибки
-      toast.error('Что-то пошло не так!')
+      toast.error('Пользователь не найден!')
     }
   };
 
@@ -191,19 +191,10 @@ const Kanban = props => {
           {role === 'Админ' && (
             <TextField 
               margin='normal'
-              id='date'
-              name='date'
-              type='date'
-              required
-              onChange={handleToDate}
-            />
-          )}
-          {role === 'Админ' && (
-            <TextField 
-              margin='normal'
               id='login'
               label='Логин'
               name='login'
+              helperText="Введите логин пользователя"
               onChange={handleUsernameChange}
             />
           )}
@@ -216,6 +207,23 @@ const Kanban = props => {
           <Typography variant='body2' fontWeight='700'>
             {data.length} Секций
           </Typography>
+        </Box>
+      )}
+      {role === 'Админ' && (
+        <Box sx={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between'
+        }}>
+          <TextField 
+            margin='normal'
+            id='date'
+            name='date'
+            type='date'
+            required
+            helperText="Введите срок задачи"
+            onChange={handleToDate}
+          />
         </Box>
       )}
       <Divider sx={{ margin: '10px 0' }} />
