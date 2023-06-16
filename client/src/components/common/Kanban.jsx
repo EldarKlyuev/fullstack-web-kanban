@@ -21,6 +21,7 @@ const Kanban = props => {
   const [selectedTask, setSelectedTask] = useState(undefined)
   const [role, setUserRole] = useState('')
   const [username, setUsername] = useState('')
+  const [toDate, setToDate] = useState('')
 
 
   useEffect(() => {
@@ -49,6 +50,10 @@ const Kanban = props => {
 
   const handleUsernameChange = (event) => {
     setUsername(event.target.value);
+  };
+
+  const handleToDate = (event) => {
+    setToDate(event.target.value);
   };
 
   const handleFormSubmit = async () => {
@@ -141,13 +146,14 @@ const Kanban = props => {
     }, timeout);
   }
 
-  const createTask = async (sectionId) => {
+  const createTask = async (sectionId, toDate) => {
     try {
-      const task = await taskApi.create(boardId, { sectionId })
+      const task = await taskApi.create(boardId, { sectionId, toDate })
       const newData = [...data]
       const index = newData.findIndex(e => e.id === sectionId)
       newData[index].tasks.unshift(task)
       setData(newData)
+      console.log(task)
     } catch (err) {
       toast.error('У вас нет на это прав. Обновите страницу')
     }
@@ -185,8 +191,18 @@ const Kanban = props => {
           {role === 'Админ' && (
             <TextField 
               margin='normal'
+              id='date'
+              name='date'
+              type='date'
+              required
+              onChange={handleToDate}
+            />
+          )}
+          {role === 'Админ' && (
+            <TextField 
+              margin='normal'
               id='login'
-              label='login'
+              label='Логин'
               name='login'
               onChange={handleUsernameChange}
             />
@@ -245,7 +261,7 @@ const Kanban = props => {
                             color: 'gray',
                             '&:hover': { color: 'green' }
                           }}
-                          onClick={() => createTask(section.id)}
+                          onClick={() => createTask(section.id, toDate)}
                         >
                           <AddOutlinedIcon />
                         </IconButton>

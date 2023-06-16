@@ -156,6 +156,7 @@ const TaskModal = props => {
   const updateContent = async (event, editor) => {
     clearTimeout(timer)
     const data = editor.getData()
+    console.log(task)
 
     console.log({ isModalClosed })
 
@@ -214,9 +215,20 @@ const TaskModal = props => {
                 marginBottom: '10px'
               }}
             />
-            <Typography variant='body2' fontWeight='700'>
-              {task !== undefined ? Moment(task.createdAt).format('YYYY-MM-DD') : ''}
-            </Typography>
+            <Box sx={{
+                width: '100%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between'
+              }}>
+                <Typography variant='body2' fontWeight='700'>
+                  Создана: {task !== undefined ? Moment(task.createdAt).format('DD.MM.YYYY') : ''}
+                </Typography>
+                <Typography variant='body2' fontWeight='700'>
+                  Срок до: {task !== undefined ? Moment(task.toDate).format('DD.MM.YYYY') : ''}
+                </Typography>
+              </Box>
+            
             <Divider sx={{ margin: '1.5rem 0' }} />
             <Box
               ref={editorWrapperRef}

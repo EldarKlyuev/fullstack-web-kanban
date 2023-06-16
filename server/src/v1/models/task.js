@@ -27,6 +27,13 @@ const taskSchema = new Schema({
   completed: {
     type: Boolean, 
     default: false 
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now  
+  },
+  toDate: {
+    type: Date
   }
   
 }, schemaOptions)

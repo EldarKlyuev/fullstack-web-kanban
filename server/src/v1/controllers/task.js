@@ -5,7 +5,7 @@ const task = require('../models/task')
 
 exports.create = async (req, res) => {
   const { user } = req
-  const { sectionId } = req.body
+  const { sectionId, toDate } = req.body
 
   try {
     if (!user) {
@@ -16,12 +16,15 @@ exports.create = async (req, res) => {
       return res.status(403).json({ error: 'У вас нет на это право' });
     }
 
+    console.log(req.body)
+
 
     const section = await Section.findById(sectionId)
     const tasksCount = await Task.find({ section: sectionId }).count()
     const task = await Task.create({
       section: sectionId,
-      position: tasksCount > 0 ? tasksCount : 0
+      position: tasksCount > 0 ? tasksCount : 0,
+      toDate: toDate
     })
     task._doc.section = section
     res.status(201).json(task)
