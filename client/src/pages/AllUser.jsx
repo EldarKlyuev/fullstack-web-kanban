@@ -10,11 +10,14 @@ import pdfMake from "pdfmake/build/pdfmake";
 import pdfFonts from "pdfmake/build/vfs_fonts";
 pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
+
 const StyledCard = styled(Card)(({ theme }) => ({
     marginBottom: theme.spacing(2),
     padding: theme.spacing(2),
     backgroundColor: '#000000',
   }));
+
+
 
 const AllUser = () => {
   const [users, setUsers] = useState([]);
@@ -40,6 +43,19 @@ const AllUser = () => {
     setOpen(true);
   };
 
+  const handlePDF = () => {
+    try {
+      generatePDF();
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(pdfData);
+      link.download = 'users.pdf';
+      link.click();
+      toast.success('Файл сохранен')
+    } catch (error) {
+      toast.error('Что-то пошло не так! Попробуйте ещё раз!');
+    }
+  };
+
   const generatePDF = () => {
     console.log(users)
     // Создание JSON-объекта для генерации PDF
@@ -56,26 +72,40 @@ const AllUser = () => {
     console.log(jsonData)
 
     // Определение шаблонов для PDF
+    // pdfMake.fonts = {
+    //   TimesNewRoman: {
+    //     normal: 'src/assets/fonts/TIMES.TTF',
+    //     bold: 'src/assets/fonts/TIMESBD.TTF',
+    //     italics: 'src/assets/fonts/TIMESI.TTF',
+    //     bolditalics: 'src/assets/fonts/TIMESBI.TTF'
+    //   }
+    // };
 
     const docDefinition = {
       content: [
-        { text: 'Пользователи', style: 'header' },
+        { text: 'Отчет о пользователях', style: 'header' },
         {
           ul: jsonData.flatMap(user => ([
-            { text: `Username: ${user.username}`, margin: [0, 0, 0, 5] },
-            { text: `Completed Tasks Count: ${user.completedTasksCount}`, margin: [0, 0, 0, 5] },
-            { text: `Telegram: ${user.telegram}`, margin: [0, 0, 0, 5] },
-            { text: `Role: ${user.role}`, margin: [0, 0, 0, 5] },
-            { text: `Current Tasks: ${user.currentTask.join(', ')}`, margin: [0, 0, 0, 5] },
-            { text: `Completed Tasks: ${user.complitedTasks.join(', ')}`, margin: [0, 0, 0, 20] }
+            { text: `Логин: ${user.username}`, margin: [0, 0, 0, 5], style: 'text' },
+            { text: `Выполненых задач: ${user.completedTasksCount}`, margin: [0, 0, 0, 5], style: 'text' },
+            { text: `Телеграм: ${user.telegram}`, margin: [0, 0, 0, 5], style: 'text' },
+            { text: `Роль в системе: ${user.role}`, margin: [0, 0, 0, 5], style: 'text' },
+            { text: `Текущие задачи: ${user.currentTask.join(', ')}`, margin: [0, 0, 0, 5], style: 'text' },
+            { text: `Завершенные задачи: ${user.complitedTasks.join(', ')}`, margin: [0, 0, 0, 20], style: 'text' }
           ]))
         }
       ],
       styles: {
         header: {
-          fontSize: 18,
+          alignment: 'center',
+          fontSize: 20,
           bold: true,
-          margin: [0, 0, 0, 10]
+          margin: [0, 0, 0, 20],
+          // font: 'TimesNewRoman'
+        },
+        text: {
+          // font: 'TimesNewRoman',
+          fontSize: 14
         }
       }
     };
@@ -113,18 +143,7 @@ const AllUser = () => {
         <Button sx={{ fontSize: "1.2rem", padding: '12px'}} onClick={handleOpen}>
           Изменить
         </Button>
-        <Button sx={{ fontSize: "1.2rem", padding: '12px'}} onClick={() => {
-          try {
-            generatePDF();
-            const link = document.createElement('a');
-            link.href = URL.createObjectURL(pdfData);
-            link.download = 'users.pdf';
-            link.click();
-            toast.success('Файл сохранен')
-          } catch (error) {
-            toast.error('Что-то пошло не так! Попробуйте ещё раз!');
-          }
-        }}>
+        <Button sx={{ fontSize: "1.2rem", padding: '12px'}} onClick={handlePDF}>
           Скачать отчёт
         </Button>
       </Box>
